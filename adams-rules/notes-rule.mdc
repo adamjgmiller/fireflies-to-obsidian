@@ -1,0 +1,6 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+When completing tasks or when you learn something important about the codebase to document for future developers, create or update relevant Markdown .md files in the '/ai-notes' folder organized to help future junior developers quickly learn about how and why we did what we did and what things they may need to reference to contribute to our app in the future.

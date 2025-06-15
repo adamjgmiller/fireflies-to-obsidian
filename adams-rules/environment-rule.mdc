@@ -1,0 +1,6 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+ALWAYS use virtual environments when possible AND minimize impact and reliance on the global environment. If you want to suggest or require an exception, ask the user first.
