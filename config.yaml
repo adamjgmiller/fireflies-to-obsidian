@@ -1,0 +1,48 @@
+# Fireflies to Obsidian Sync Tool Configuration
+
+# API Settings
+fireflies:
+  api_url: "https://api.fireflies.ai/graphql"
+  rate_limit:
+    requests_per_minute: 60
+    retry_attempts: 3
+    backoff_factor: 2
+
+# Obsidian Vault Settings
+obsidian:
+  vault_path: ""  # Will be overridden by environment variable
+  folder_name: "Fireflies"
+  file_naming:
+    pattern: "{date}-{time}-{title}"
+    date_format: "%Y-%m-%d"
+    time_format: "%H-%M"
+    max_title_length: 50
+
+# Sync Settings
+sync:
+  polling_interval_seconds: 15
+  batch_size: 10
+  lookback_days: 7  # How many days back to check for new meetings
+
+# Markdown Template Settings
+markdown:
+  include_yaml_frontmatter: true
+  include_transcript: true
+  include_summary: true
+  include_action_items: true
+  include_attendees: true
+  group_speakers: true
+
+# Notifications (macOS)
+notifications:
+  enabled: true
+  sound: "default"
+  show_for_errors: true
+  show_for_success: true
+
+# Logging
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  file_path: "logs/fireflies_sync.log"
+  max_file_size_mb: 10
+  backup_count: 5 

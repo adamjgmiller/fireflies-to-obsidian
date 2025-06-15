@@ -28,13 +28,13 @@ Based on PRD: prd-fireflies-obsidian-sync.md
 
 ## Tasks
 
-- [ ] 1.0 Set up virtual environment and project foundation
-  - [ ] 1.1 Create virtual environment with `python -m venv venv`
-  - [ ] 1.2 Create project directory structure (src/, tests/, config files)
-  - [ ] 1.3 Create requirements.txt with dependencies (httpx, pyyaml, pytest)
-  - [ ] 1.4 Set up .env.example and config.yaml template files
-  - [ ] 1.5 Initialize git repository and create .gitignore
-  - [ ] 1.6 Create basic logging configuration in src/utils/logger.py
+- [x] 1.0 Set up virtual environment and project foundation
+  - [x] 1.1 Create virtual environment with `python -m venv venv`
+  - [x] 1.2 Create project directory structure (src/, tests/, config files)
+  - [x] 1.3 Create requirements.txt with dependencies (httpx, pyyaml, pytest)
+  - [x] 1.4 Set up .env.example and config.yaml template files
+  - [x] 1.5 Initialize git repository and create .gitignore
+  - [x] 1.6 Create basic logging configuration in src/utils/logger.py
 - [ ] 2.0 Implement Fireflies API client with GraphQL support
   - [ ] 2.1 Create src/fireflies_client.py with GraphQL query methods
   - [ ] 2.2 Implement authentication and API key management
