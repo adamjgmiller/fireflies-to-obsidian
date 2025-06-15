@@ -35,26 +35,26 @@ Based on PRD: prd-fireflies-obsidian-sync.md
   - [x] 1.4 Set up .env.example and config.yaml template files
   - [x] 1.5 Initialize git repository and create .gitignore
   - [x] 1.6 Create basic logging configuration in src/utils/logger.py
-- [ ] 2.0 Implement Fireflies API client with GraphQL support
-  - [ ] 2.1 Create src/fireflies_client.py with GraphQL query methods
-  - [ ] 2.2 Implement authentication and API key management
-  - [ ] 2.3 Add meeting data retrieval with pagination support
-  - [ ] 2.4 Implement rate limiting and exponential backoff
-  - [ ] 2.5 Add error handling for API failures and network issues
-  - [ ] 2.6 Create unit tests for API client functionality
-- [ ] 3.0 Build Obsidian vault integration and file management
-  - [ ] 3.1 Create src/obsidian_sync.py for file operations
-  - [ ] 3.2 Implement Fireflies folder creation in Obsidian vault
-  - [ ] 3.3 Add file naming logic (YYYY-MM-DD-HH-MM-[Meeting Title].md)
-  - [ ] 3.4 Implement duplicate file detection and handling
-  - [ ] 3.5 Add configuration for custom Obsidian vault path
-  - [ ] 3.6 Create unit tests for file operations
+- [x] 2.0 Implement Fireflies API client with GraphQL support
+  - [x] 2.1 Create src/fireflies_client.py with GraphQL query methods
+  - [x] 2.2 Implement authentication and API key management
+  - [x] 2.3 Add meeting data retrieval with pagination support
+  - [x] 2.4 Implement rate limiting and exponential backoff
+  - [x] 2.5 Add error handling for API failures and network issues
+  - [x] 2.6 Create unit tests for API client functionality
+- [x] 3.0 Build Obsidian vault integration and file management
+  - [x] 3.1 Create src/obsidian_sync.py for file operations
+  - [x] 3.2 Implement Fireflies folder creation in Obsidian vault
+  - [x] 3.3 Add file naming logic (YYYY-MM-DD-HH-MM-[Meeting Title].md)
+  - [x] 3.4 Implement duplicate file detection and handling
+  - [x] 3.5 Add configuration for custom Obsidian vault path
+  - [x] 3.6 Create unit tests for file operations
 - [ ] 4.0 Create meeting data processing and Markdown formatting
   - [ ] 4.1 Create src/markdown_formatter.py with template system
-  - [ ] 4.2 Implement YAML frontmatter generation with all metadata
-  - [ ] 4.3 Format transcript with grouped speaker sections
-  - [ ] 4.4 Add meeting details, attendees, and summary sections
-  - [ ] 4.5 Process action items and key topics from Fireflies data
+  - [ ] 4.2 Implement YAML frontmatter generation with all metadata (use meeting_attendees, summary object structure)
+  - [ ] 4.3 Format transcript with grouped speaker sections (parse sentences array)
+  - [ ] 4.4 Add meeting details, attendees, and summary sections (handle nested summary object)
+  - [ ] 4.5 Process action items and key topics from Fireflies data (extract from summary.action_items, summary.keywords)
   - [ ] 4.6 Create unit tests for Markdown formatting
 - [ ] 5.0 Implement continuous polling service with state management
   - [ ] 5.1 Create src/state_manager.py to track processed meetings

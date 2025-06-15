@@ -6,4 +6,4 @@ pytest-asyncio==0.23.2 # Async testing support
 python-dotenv==1.0.0   # Environment variable management
 aiofiles==23.2.1       # Async file operations
 schedule==1.2.0        # Job scheduling for polling
-pydantic==2.5.2        # Data validation and settings management 
+pydantic==2.10.4       # Data validation and settings management 

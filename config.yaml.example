@@ -1,0 +1,26 @@
+debug: false
+fireflies:
+  api_key: your_fireflies_api_key_here
+  api_url: https://api.fireflies.ai/graphql
+  rate_limit:
+    backoff_factor: 2
+    requests_per_minute: 60
+    retry_attempts: 3
+  webhook_url: ''
+log_level: INFO
+notifications:
+  enabled: true
+  show_errors: true
+  show_success: true
+obsidian:
+  fireflies_folder: Fireflies
+  max_filename_length: 50
+  template_path: ''
+  vault_path: /path/to/your/obsidian/vault
+sync:
+  batch_size: 10
+  from_date: '2024-06-13T00:00:00.000Z'
+  lookback_days: 7
+  polling_interval_seconds: 15
+  test_meeting_ids: []
+  test_mode: false
