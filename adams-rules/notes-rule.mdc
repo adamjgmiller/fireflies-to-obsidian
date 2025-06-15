@@ -3,4 +3,72 @@ description:
 globs: 
 alwaysApply: true
 ---
-When completing tasks or when you learn something important about the codebase to document for future developers, create or update relevant Markdown .md files in the '/ai-notes' folder organized to help future junior developers quickly learn about how and why we did what we did and what things they may need to reference to contribute to our app in the future.
+# AI Documentation Rule
+
+## When to Create Documentation
+
+**ALWAYS** create or update relevant Markdown (.md) files in the `ai-notes` folder when:
+
+1. **Completing any task from a task list** (especially from `/ai-dev-tasks/tasks/`)
+2. **Discovering important codebase patterns** during exploration or debugging
+3. **Learning about API integrations** (external services, data formats, authentication)
+4. **Understanding business logic** that isn't immediately obvious from code
+5. **Encountering or solving complex technical challenges**
+6. **Adding new dependencies** or changing architecture
+7. **Finding undocumented workflows** or processes
+
+## What to Document
+
+Create focused documentation files covering:
+
+- **API Integration Patterns**: How external APIs work, data structures, error handling
+- **Business Logic Explanations**: Why certain decisions were made, not just what the code does
+- **Development Workflows**: Setup processes, testing patterns, deployment steps
+- **Architectural Decisions**: Technology choices, design patterns, trade-offs made
+- **Troubleshooting Guides**: Common issues and their solutions
+- **Code Organization**: How files are structured and why
+
+## File Naming Convention
+
+Use descriptive, searchable names:
+- `api-[service-name].md` (e.g., `api-fireflies.md`)
+- `workflow-[process-name].md` (e.g., `workflow-sync-process.md`)
+- `architecture-[component].md` (e.g., `architecture-data-flow.md`)
+- `troubleshooting-[area].md` (e.g., `troubleshooting-authentication.md`)
+
+## Documentation Format
+
+Structure each file with:
+```markdown
+# [Clear Title]
+
+## Purpose
+What this document explains and why it's important
+
+## Key Concepts
+Core ideas developers need to understand
+
+## Implementation Details
+How it works, with code examples where helpful
+
+## Common Issues
+Problems developers might encounter and solutions
+
+## Related Files
+Links to relevant source files and other documentation
+```
+
+## Target Audience
+
+Write for **junior developers** who need to:
+- Understand the codebase quickly
+- Contribute without breaking existing functionality
+- Solve problems independently
+- Make informed decisions about changes
+
+## Quality Standards
+
+- **Actionable**: Include specific examples and code snippets
+- **Current**: Update documentation when code changes
+- **Discoverable**: Use clear titles and organize logically
+- **Concise**: Focus on essential information, avoid redundancy
