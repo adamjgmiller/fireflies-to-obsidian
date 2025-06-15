@@ -3,9 +3,9 @@ description:
 globs: 
 alwaysApply: true
 ---
-You, I, and our development team are following a process where we always:
+You, I, and our development team are following a process where - except for very small tasks or changes - we always:
 1. Create a PRD following the rules in '/ai-dev-tasks/create-prd.mdc' and put it in '/ai-dev-tasks/tasks'
 2. Use that PRD to create a task list following the rules in '/ai-dev-tasks/generate-tasks.mdc'
 3. Work through that PRD task list following the rules in '/ai-dev-tasks/process-task-list.mdc'
 
-If we ask for a PRD, mention a PRD, or talk about a task list, those are the lists we are talking about.
+If we ask for a PRD, mention a PRD, or talk about a task list, those are most likely the lists we are talking about.
