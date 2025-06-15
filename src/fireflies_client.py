@@ -460,4 +460,37 @@ class FirefliesClient:
         Returns:
             str: Human-readable error message
         """
-        return self.ERROR_CODES.get(error_code, f"Unknown error: {error_code}") 
+        return self.ERROR_CODES.get(error_code, f"Unknown error: {error_code}")
+    
+    # Synchronous wrapper methods for use in non-async code
+    def get_recent_meetings(self, since_date: datetime = None, limit: int = 100) -> List[Dict]:
+        """
+        Synchronous wrapper for get_recent_transcripts.
+        
+        Args:
+            since_date: Get meetings since this date (default: 7 days ago)
+            limit: Maximum number of meetings to retrieve
+            
+        Returns:
+            List of meeting data dictionaries
+        """
+        import asyncio
+        return asyncio.run(self.get_recent_transcripts(since_date, limit))
+    
+    def get_meeting(self, meeting_id: str) -> Optional[Dict]:
+        """
+        Synchronous wrapper for get_transcript_details.
+        
+        Args:
+            meeting_id: ID of the meeting to retrieve
+            
+        Returns:
+            Meeting data dictionary or None if not found
+        """
+        import asyncio
+        try:
+            return asyncio.run(self.get_transcript_details(meeting_id))
+        except FirefliesAPIError as e:
+            if e.error_code == 'object_not_found':
+                return None
+            raise

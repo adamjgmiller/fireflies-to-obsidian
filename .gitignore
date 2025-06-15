@@ -134,6 +134,7 @@ logs/
 state.json
 meeting_state.json
 processed_meetings.json
+.state/
 
 # macOS
 .DS_Store

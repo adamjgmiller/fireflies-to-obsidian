@@ -4,6 +4,7 @@ from pathlib import Path
 from datetime import datetime
 from typing import Dict, Any, Optional
 from .utils.logger import get_logger
+from .markdown_formatter import MarkdownFormatter
 
 logger = get_logger(__name__)
 
@@ -12,6 +13,7 @@ class ObsidianSync:
     def __init__(self, vault_path: str):
         self.vault_path = Path(vault_path)
         self.fireflies_folder = self.vault_path / "Fireflies"
+        self.formatter = MarkdownFormatter()
         
     def initialize_vault_folder(self) -> None:
         """Create Fireflies folder in Obsidian vault if it doesn't exist."""
@@ -24,23 +26,8 @@ class ObsidianSync:
     
     def generate_filename(self, meeting_data: Dict[str, Any]) -> str:
         """Generate filename in format: YYYY-MM-DD-HH-MM-[Meeting Title].md"""
-        # Placeholder: Extract date from meeting data
-        # This will be implemented when we have the actual meeting data structure
-        meeting_date = meeting_data.get('date', datetime.now())
-        if isinstance(meeting_date, str):
-            # Parse date string if needed
-            meeting_date = datetime.fromisoformat(meeting_date.replace('Z', '+00:00'))
-        
-        # Clean meeting title for filename
-        title = meeting_data.get('title', 'Untitled Meeting')
-        # Remove special characters that might cause issues in filenames
-        clean_title = re.sub(r'[<>:"/\\|?*]', '', title)
-        clean_title = clean_title.strip()
-        
-        # Format: YYYY-MM-DD-HH-MM-[Meeting Title].md
-        filename = f"{meeting_date.strftime('%Y-%m-%d-%H-%M')}-{clean_title}.md"
-        
-        return filename
+        # Use the formatter's filename generation method
+        return self.formatter.format_filename(meeting_data)
     
     def check_duplicate(self, filename: str) -> bool:
         """Check if a file with the given name already exists."""
@@ -104,3 +91,23 @@ class ObsidianSync:
         except Exception as e:
             logger.error(f"Failed to get existing meeting IDs: {e}")
             return meeting_ids
+    
+    def create_meeting_note(self, meeting_data: Dict[str, Any]) -> Optional[Path]:
+        """Create a formatted meeting note and save it to the vault.
+        
+        Args:
+            meeting_data: Meeting data from Fireflies API
+            
+        Returns:
+            Path to the created file, or None if creation failed
+        """
+        try:
+            # Format the meeting content using MarkdownFormatter
+            content = self.formatter.format_meeting(meeting_data)
+            
+            # Save the formatted content
+            return self.save_meeting(meeting_data, content)
+            
+        except Exception as e:
+            logger.error(f"Failed to create meeting note: {e}")
+            return None
