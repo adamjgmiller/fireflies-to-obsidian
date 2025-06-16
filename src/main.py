@@ -62,7 +62,20 @@ def process_meetings(fireflies_client: FirefliesClient,
             # Normal mode: get recent meetings
             # Get meetings from the last 7 days by default
             since_date = datetime.now() - timedelta(days=7)
-            meetings = fireflies_client.get_recent_meetings(since_date)
+            meetings_list = fireflies_client.get_recent_meetings(since_date)
+            
+            # Fetch full details for each meeting
+            logger.info(f"Found {len(meetings_list)} meetings, fetching full details...")
+            meetings = []
+            for meeting_summary in meetings_list:
+                try:
+                    meeting_id = meeting_summary.get('id')
+                    if meeting_id:
+                        full_meeting = fireflies_client.get_meeting(meeting_id)
+                        if full_meeting:
+                            meetings.append(full_meeting)
+                except Exception as e:
+                    logger.error(f"Failed to fetch full details for meeting {meeting_id}: {e}")
         
         logger.info(f"Found {len(meetings)} meetings to process")
         

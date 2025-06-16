@@ -7,7 +7,7 @@ to retrieve meeting transcripts, summaries, and metadata.
 
 import asyncio
 import logging
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from typing import Dict, List, Optional, Any
 
 import httpx
@@ -475,7 +475,19 @@ class FirefliesClient:
             List of meeting data dictionaries
         """
         import asyncio
-        return asyncio.run(self.get_recent_transcripts(since_date, limit))
+        
+        # Handle datetime conversion properly to avoid JSON serialization issues
+        if since_date is None:
+            # Default to 7 days ago
+            since_date = datetime.now(timezone.utc) - timedelta(days=7)
+        
+        # Convert datetime to ISO string format expected by the API
+        if isinstance(since_date, datetime):
+            from_date_str = since_date.isoformat()
+        else:
+            from_date_str = since_date
+            
+        return asyncio.run(self.get_recent_transcripts(from_date_str, limit=limit))
     
     def get_meeting(self, meeting_id: str) -> Optional[Dict]:
         """

@@ -86,6 +86,10 @@ class StateManager:
     
     def set_metadata(self, key: str, value: any) -> None:
         """Set a metadata value."""
+        # Convert datetime objects to ISO string format for JSON serialization
+        if isinstance(value, datetime):
+            value = value.isoformat()
+        
         self.state_data['metadata'][key] = value
         self._save_state()
     
