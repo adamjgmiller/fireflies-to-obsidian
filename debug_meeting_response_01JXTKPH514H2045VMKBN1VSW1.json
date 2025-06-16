@@ -1,0 +1,2882 @@
+{
+  "id": "01JXTKPH514H2045VMKBN1VSW1",
+  "title": "Test 2 for Replit",
+  "date": 1750018500000,
+  "dateString": "2025-06-15T20:15:07.000Z",
+  "duration": 41.25,
+  "organizer_email": "adam.miller@midao.org",
+  "participants": [],
+  "fireflies_users": [
+    "adam.miller@midao.org"
+  ],
+  "meeting_attendees": null,
+  "speakers": [
+    {
+      "id": 0,
+      "name": "Adam Miller"
+    }
+  ],
+  "sentences": [
+    {
+      "index": 0,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "And bought Chase Day two, right?",
+      "raw_text": "And bought Chase Day two, right?",
+      "start_time": 0.8,
+      "end_time": 23.72
+    },
+    {
+      "index": 1,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Last time he threw was Monday night against Tiffany.",
+      "raw_text": "Last time he threw was Monday night against Tiffany.",
+      "start_time": 23.72,
+      "end_time": 25.84
+    },
+    {
+      "index": 2,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Remember that visual?",
+      "raw_text": "Remember that visual?",
+      "start_time": 30.85,
+      "end_time": 31.89
+    },
+    {
+      "index": 3,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Throwing his love into that dugout.",
+      "raw_text": "Throwing his love into that dugout.",
+      "start_time": 32.13,
+      "end_time": 33.89
+    },
+    {
+      "index": 4,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "He let a couple of runs, a couple of hits and a walk to try to get lemayhu to roll over.",
+      "raw_text": "He let a couple of runs, a couple of hits and a walk to try to get lemayhu to roll over.",
+      "start_time": 34.37,
+      "end_time": 40.29
+    },
+    {
+      "index": 5,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Maybe double play ball right here at second.",
+      "raw_text": "Maybe double play ball right here at second.",
+      "start_time": 40.29,
+      "end_time": 52.78
+    },
+    {
+      "index": 6,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Judge, who has struck out nine times in 11 at bats in the series.",
+      "raw_text": "Judge, who has struck out nine times in 11 at bats in the series.",
+      "start_time": 69.66,
+      "end_time": 76.94
+    },
+    {
+      "index": 7,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "And here comes the four Yankee.",
+      "raw_text": "And here comes the four Yankee.",
+      "start_time": 79.66,
+      "end_time": 81.5
+    },
+    {
+      "index": 8,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "We'll take the break.",
+      "raw_text": "We'll take the break.",
+      "start_time": 82.46,
+      "end_time": 83.46
+    },
+    {
+      "index": 9,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Two nothing.",
+      "raw_text": "Two nothing.",
+      "start_time": 83.46,
+      "end_time": 84.06
+    },
+    {
+      "index": 10,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Red Sox have the lead in the eighth inning.",
+      "raw_text": "Red Sox have the lead in the eighth inning.",
+      "start_time": 84.06,
+      "end_time": 86.26
+    },
+    {
+      "index": 11,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Equipment.",
+      "raw_text": "Equipment.",
+      "start_time": 86.26,
+      "end_time": 86.78
+    },
+    {
+      "index": 12,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "It'll be Garrett Winlock coming on to take on Judge.",
+      "raw_text": "It'll be Garrett Winlock coming on to take on Judge.",
+      "start_time": 197.62,
+      "end_time": 199.98
+    },
+    {
+      "index": 13,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "He got his fifth win this season with a score of 10.",
+      "raw_text": "He got his fifth win this season with a score of 10.",
+      "start_time": 199.98,
+      "end_time": 203.06
+    },
+    {
+      "index": 14,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "That's a big moment here.",
+      "raw_text": "That's a big moment here.",
+      "start_time": 205.07,
+      "end_time": 206.11
+    },
+    {
+      "index": 15,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "I mean you can't.",
+      "raw_text": "I mean you can't.",
+      "start_time": 206.11,
+      "end_time": 206.99
+    },
+    {
+      "index": 16,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "You got a base open, but it's a two run cushion.",
+      "raw_text": "You got a base open, but it's a two run cushion.",
+      "start_time": 207.31,
+      "end_time": 209.87
+    },
+    {
+      "index": 17,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "You put the tiny run on second base.",
+      "raw_text": "You put the tiny run on second base.",
+      "start_time": 209.87,
+      "end_time": 212.11
+    },
+    {
+      "index": 18,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "You got to attack like we did so far in the series.",
+      "raw_text": "You got to attack like we did so far in the series.",
+      "start_time": 212.27,
+      "end_time": 215.47
+    },
+    {
+      "index": 19,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Location that's been key.",
+      "raw_text": "Location that's been key.",
+      "start_time": 216.11,
+      "end_time": 217.87
+    },
+    {
+      "index": 20,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Jud struck out in the first inning.",
+      "raw_text": "Jud struck out in the first inning.",
+      "start_time": 220.67,
+      "end_time": 222.47
+    },
+    {
+      "index": 21,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "The third inning again in the sixth inning.",
+      "raw_text": "The third inning again in the sixth inning.",
+      "start_time": 222.47,
+      "end_time": 224.35
+    },
+    {
+      "index": 22,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "There as it winds down.",
+      "raw_text": "There as it winds down.",
+      "start_time": 227.07,
+      "end_time": 229.79
+    },
+    {
+      "index": 23,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Oh, and one, two out of eight.",
+      "raw_text": "Oh, and one, two out of eight.",
+      "start_time": 230.6,
+      "end_time": 234.16
+    },
+    {
+      "index": 24,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Couple of home runs against Gareth third.",
+      "raw_text": "Couple of home runs against Gareth third.",
+      "start_time": 234.16,
+      "end_time": 244.36
+    },
+    {
+      "index": 25,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Toro in the second rally.",
+      "raw_text": "Toro in the second rally.",
+      "start_time": 244.84,
+      "end_time": 256.52
+    },
+    {
+      "index": 26,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Judge very quiet over four.",
+      "raw_text": "Judge very quiet over four.",
+      "start_time": 275.1,
+      "end_time": 278.22
+    },
+    {
+      "index": 27,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Just hit into a rally killing double play.",
+      "raw_text": "Just hit into a rally killing double play.",
+      "start_time": 278.22,
+      "end_time": 281.34
+    },
+    {
+      "index": 28,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Lighter coming out of their bullpen.",
+      "raw_text": "Lighter coming out of their bullpen.",
+      "start_time": 282.87,
+      "end_time": 284.39
+    },
+    {
+      "index": 29,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Roman Anthony the batter get the right little fastball.",
+      "raw_text": "Roman Anthony the batter get the right little fastball.",
+      "start_time": 285.19,
+      "end_time": 292.31
+    },
+    {
+      "index": 30,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "94.",
+      "raw_text": "94.",
+      "start_time": 292.31,
+      "end_time": 292.91
+    },
+    {
+      "index": 31,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "He has a split.",
+      "raw_text": "He has a split.",
+      "start_time": 292.91,
+      "end_time": 293.71
+    },
+    {
+      "index": 32,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "The curveball that he likes bounced up there with a curve and the count one one back to that double play.",
+      "raw_text": "The curveball that he likes bounced up there with a curve and the count one one back to that double play.",
+      "start_time": 293.71,
+      "end_time": 303.35
+    },
+    {
+      "index": 33,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Well, this is the game.",
+      "raw_text": "Well, this is the game.",
+      "start_time": 303.35,
+      "end_time": 304.07
+    },
+    {
+      "index": 34,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Amir Ch.",
+      "raw_text": "Amir Ch.",
+      "start_time": 304.07,
+      "end_time": 304.87
+    },
+    {
+      "index": 35,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Two guys on he rope two.",
+      "raw_text": "Two guys on he rope two.",
+      "start_time": 304.87,
+      "end_time": 306.39
+    },
+    {
+      "index": 36,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "He stays with kind of an awkward hop.",
+      "raw_text": "He stays with kind of an awkward hop.",
+      "start_time": 306.55,
+      "end_time": 308.71
+    },
+    {
+      "index": 37,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "But he gets into Tamil and Hamilton white dirt.",
+      "raw_text": "But he gets into Tamil and Hamilton white dirt.",
+      "start_time": 308.71,
+      "end_time": 311.91
+    },
+    {
+      "index": 38,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Step back except calling it throw.",
+      "raw_text": "Step back except calling it throw.",
+      "start_time": 312.81,
+      "end_time": 314.65
+    },
+    {
+      "index": 39,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "That's the biggest spot in the game right there.",
+      "raw_text": "That's the biggest spot in the game right there.",
+      "start_time": 315.69,
+      "end_time": 318.09
+    },
+    {
+      "index": 40,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Rappy dippers have been seen a lot of fastballs.",
+      "raw_text": "Rappy dippers have been seen a lot of fastballs.",
+      "start_time": 339.3,
+      "end_time": 350.74
+    },
+    {
+      "index": 41,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Curveball we got split here with Lighter.",
+      "raw_text": "Curveball we got split here with Lighter.",
+      "start_time": 352.74,
+      "end_time": 354.9
+    },
+    {
+      "index": 42,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "A lot of off speed.",
+      "raw_text": "A lot of off speed.",
+      "start_time": 355.46,
+      "end_time": 356.66
+    },
+    {
+      "index": 43,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Trying to get him a spin.",
+      "raw_text": "Trying to get him a spin.",
+      "start_time": 357.7,
+      "end_time": 359.06
+    },
+    {
+      "index": 44,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Red Sox are much sharper.",
+      "raw_text": "Red Sox are much sharper.",
+      "start_time": 389.59,
+      "end_time": 392.55
+    },
+    {
+      "index": 45,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "John turning to double plays, making winning plays, right.",
+      "raw_text": "John turning to double plays, making winning plays, right.",
+      "start_time": 400.95,
+      "end_time": 406.95
+    },
+    {
+      "index": 46,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Allowing other teams to mess up.",
+      "raw_text": "Allowing other teams to mess up.",
+      "start_time": 406.95,
+      "end_time": 408.51
+    },
+    {
+      "index": 47,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "You see the Yankees now on two occasions.",
+      "raw_text": "You see the Yankees now on two occasions.",
+      "start_time": 408.51,
+      "end_time": 410.55
+    },
+    {
+      "index": 48,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Second base, scoring position, tight ball games thrown out.",
+      "raw_text": "Second base, scoring position, tight ball games thrown out.",
+      "start_time": 411.19,
+      "end_time": 416.86
+    },
+    {
+      "index": 49,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "You're Japan.",
+      "raw_text": "You're Japan.",
+      "start_time": 441.43,
+      "end_time": 442.11
+    },
+    {
+      "index": 50,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Another age wrestler would lock in a draw.",
+      "raw_text": "Another age wrestler would lock in a draw.",
+      "start_time": 442.11,
+      "end_time": 445.19
+    },
+    {
+      "index": 51,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "See how important that home run is as far as getting in.",
+      "raw_text": "See how important that home run is as far as getting in.",
+      "start_time": 450.79,
+      "end_time": 453.67
+    },
+    {
+      "index": 52,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Now watch the sort celebrating 70 years in business.",
+      "raw_text": "Now watch the sort celebrating 70 years in business.",
+      "start_time": 467.3,
+      "end_time": 479.06
+    },
+    {
+      "index": 53,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Continue to get excellent starting B7 career high.",
+      "raw_text": "Continue to get excellent starting B7 career high.",
+      "start_time": 480.98,
+      "end_time": 485.02
+    },
+    {
+      "index": 54,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "114 pitches free.",
+      "raw_text": "114 pitches free.",
+      "start_time": 485.02,
+      "end_time": 488.82
+    },
+    {
+      "index": 55,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Was awfully good.",
+      "raw_text": "Was awfully good.",
+      "start_time": 488.82,
+      "end_time": 489.94
+    },
+    {
+      "index": 56,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "But he was better 7 nights defense as well, right?",
+      "raw_text": "But he was better 7 nights defense as well, right?",
+      "start_time": 490.9,
+      "end_time": 508.03
+    },
+    {
+      "index": 57,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Kind of surprised.",
+      "raw_text": "Kind of surprised.",
+      "start_time": 508.51,
+      "end_time": 509.19
+    },
+    {
+      "index": 58,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "No.",
+      "raw_text": "No.",
+      "start_time": 509.19,
+      "end_time": 509.39
+    },
+    {
+      "index": 59,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "You could pitch it from up there.",
+      "raw_text": "You could pitch it from up there.",
+      "start_time": 509.39,
+      "end_time": 510.63
+    },
+    {
+      "index": 60,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Was there lasted the Toro made the play in third base.",
+      "raw_text": "Was there lasted the Toro made the play in third base.",
+      "start_time": 510.63,
+      "end_time": 514.23
+    },
+    {
+      "index": 61,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "But we would see Cor kind of go to Marcelo for defense for Toro.",
+      "raw_text": "But we would see Cor kind of go to Marcelo for defense for Toro.",
+      "start_time": 514.23,
+      "end_time": 518.11
+    },
+    {
+      "index": 62,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "We've seen Hamilton for Campbell last night.",
+      "raw_text": "We've seen Hamilton for Campbell last night.",
+      "start_time": 518.11,
+      "end_time": 528.089
+    },
+    {
+      "index": 63,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Big league plays.",
+      "raw_text": "Big league plays.",
+      "start_time": 528.489,
+      "end_time": 529.609
+    },
+    {
+      "index": 64,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Playing third base.",
+      "raw_text": "Playing third base.",
+      "start_time": 530.009,
+      "end_time": 531.129
+    },
+    {
+      "index": 65,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "So smooth.",
+      "raw_text": "So smooth.",
+      "start_time": 534.169,
+      "end_time": 535.049
+    },
+    {
+      "index": 66,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "One down, but I say two nothing in the game.",
+      "raw_text": "One down, but I say two nothing in the game.",
+      "start_time": 538.329,
+      "end_time": 540.649
+    },
+    {
+      "index": 67,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "But we got a little two homers and a little cutter from Latel Oh, Goldie.",
+      "raw_text": "But we got a little two homers and a little cutter from Latel Oh, Goldie.",
+      "start_time": 550.5,
+      "end_time": 562.26
+    },
+    {
+      "index": 68,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "It's okay, sweetie.",
+      "raw_text": "It's okay, sweetie.",
+      "start_time": 562.26,
+      "end_time": 563.1
+    },
+    {
+      "index": 69,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "It's okay.",
+      "raw_text": "It's okay.",
+      "start_time": 563.1,
+      "end_time": 563.78
+    },
+    {
+      "index": 70,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "That's a really good team.",
+      "raw_text": "That's a really good team.",
+      "start_time": 624.45,
+      "end_time": 625.49
+    },
+    {
+      "index": 71,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "This is exactly where you want him.",
+      "raw_text": "This is exactly where you want him.",
+      "start_time": 632.53,
+      "end_time": 634.25
+    },
+    {
+      "index": 72,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Just bottom Z sucks hitting the world right after this.",
+      "raw_text": "Just bottom Z sucks hitting the world right after this.",
+      "start_time": 634.25,
+      "end_time": 652.3
+    },
+    {
+      "index": 73,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "And as far as you can go.",
+      "raw_text": "And as far as you can go.",
+      "start_time": 652.46,
+      "end_time": 655.62
+    },
+    {
+      "index": 74,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Heading to Seattle three.",
+      "raw_text": "Heading to Seattle three.",
+      "start_time": 655.62,
+      "end_time": 657.34
+    },
+    {
+      "index": 75,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "San Francisco for three in Anaheim for three.",
+      "raw_text": "San Francisco for three in Anaheim for three.",
+      "start_time": 658.22,
+      "end_time": 661.98
+    },
+    {
+      "index": 76,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Longest road trip of 2025 on the north day there.",
+      "raw_text": "Longest road trip of 2025 on the north day there.",
+      "start_time": 662.06,
+      "end_time": 665.58
+    },
+    {
+      "index": 77,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Two.",
+      "raw_text": "Two.",
+      "start_time": 665.58,
+      "end_time": 665.9
+    },
+    {
+      "index": 78,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "So I've been waiting for 10 days.",
+      "raw_text": "So I've been waiting for 10 days.",
+      "start_time": 666.7,
+      "end_time": 668.38
+    },
+    {
+      "index": 79,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Two and the one pitch that can freeze you.",
+      "raw_text": "Two and the one pitch that can freeze you.",
+      "start_time": 669.98,
+      "end_time": 686.02
+    },
+    {
+      "index": 80,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "That one right there.",
+      "raw_text": "That one right there.",
+      "start_time": 686.5,
+      "end_time": 687.3
+    },
+    {
+      "index": 81,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Right.",
+      "raw_text": "Right.",
+      "start_time": 687.3,
+      "end_time": 687.5
+    },
+    {
+      "index": 82,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "The fastball in.",
+      "raw_text": "The fastball in.",
+      "start_time": 687.5,
+      "end_time": 688.58
+    },
+    {
+      "index": 83,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Put the change up either way.",
+      "raw_text": "Put the change up either way.",
+      "start_time": 690.18,
+      "end_time": 691.94
+    },
+    {
+      "index": 84,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Careful.",
+      "raw_text": "Careful.",
+      "start_time": 692.1,
+      "end_time": 692.66
+    },
+    {
+      "index": 85,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Got it going in the first inning.",
+      "raw_text": "Got it going in the first inning.",
+      "start_time": 699.87,
+      "end_time": 701.31
+    },
+    {
+      "index": 86,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "The RBI signal to drive in.",
+      "raw_text": "The RBI signal to drive in.",
+      "start_time": 702.59,
+      "end_time": 704.59
+    },
+    {
+      "index": 87,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Roman Gonzalez with triple.",
+      "raw_text": "Roman Gonzalez with triple.",
+      "start_time": 704.75,
+      "end_time": 706.51
+    },
+    {
+      "index": 88,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "He's one for three.",
+      "raw_text": "He's one for three.",
+      "start_time": 708.11,
+      "end_time": 709.15
+    },
+    {
+      "index": 89,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Click that one file for strike one while you're from the set.",
+      "raw_text": "Click that one file for strike one while you're from the set.",
+      "start_time": 712.51,
+      "end_time": 754.56
+    },
+    {
+      "index": 90,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Wonderful day at the ballpark.",
+      "raw_text": "Wonderful day at the ballpark.",
+      "start_time": 763.52,
+      "end_time": 765.04
+    },
+    {
+      "index": 91,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Temperatures in the 60s.",
+      "raw_text": "Temperatures in the 60s.",
+      "start_time": 765.04,
+      "end_time": 766.4
+    },
+    {
+      "index": 92,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Sunshine too.",
+      "raw_text": "Sunshine too.",
+      "start_time": 767.76,
+      "end_time": 768.8
+    },
+    {
+      "index": 93,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Side is retired.",
+      "raw_text": "Side is retired.",
+      "start_time": 776.73,
+      "end_time": 777.77
+    },
+    {
+      "index": 94,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "The business idea is called Great API or something like it and basically take all the APIs that people like to use and make a layer on top of them that actually fucking works as an API.",
+      "raw_text": "The business idea is called Great API or something like it and basically take all the APIs that people like to use and make a layer on top of them that actually fucking works as an API.",
+      "start_time": 784.41,
+      "end_time": 794.73
+    },
+    {
+      "index": 95,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "In that era, knitwear is actually having a heyday in sports.",
+      "raw_text": "In that era, knitwear is actually having a heyday in sports.",
+      "start_time": 796.33,
+      "end_time": 799.45
+    },
+    {
+      "index": 96,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Think of ski sweaters or Argonaut sweater vests on the Gulf grade.",
+      "raw_text": "Think of ski sweaters or Argonaut sweater vests on the Gulf grade.",
+      "start_time": 799.93,
+      "end_time": 803.93
+    },
+    {
+      "index": 97,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "And Basel decided to jump on the bandwagon and create cardigans.",
+      "raw_text": "And Basel decided to jump on the bandwagon and create cardigans.",
+      "start_time": 805.97,
+      "end_time": 809.33
+    },
+    {
+      "index": 98,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "It when you need inspiration in sports shopping Ralphs for mouth laundering meals and appetizing ingredients.",
+      "raw_text": "It when you need inspiration in sports shopping Ralphs for mouth laundering meals and appetizing ingredients.",
+      "start_time": 830.06,
+      "end_time": 882.33
+    },
+    {
+      "index": 99,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Our low price competitive big savings with over $600 in digital coupons each week plus up to $1 off per gallon at the ton.",
+      "raw_text": "Our low price competitive big savings with over $600 in digital coupons each week plus up to $1 off per gallon at the ton.",
+      "start_time": 883.45,
+      "end_time": 892.25
+    },
+    {
+      "index": 100,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "At Ralphs you always get big flavors and big savings.",
+      "raw_text": "At Ralphs you always get big flavors and big savings.",
+      "start_time": 895.21,
+      "end_time": 899.21
+    },
+    {
+      "index": 101,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Ralphs fresh for everyone.",
+      "raw_text": "Ralphs fresh for everyone.",
+      "start_time": 900.57,
+      "end_time": 903.29
+    },
+    {
+      "index": 102,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Sending Red Sox up two nothing.",
+      "raw_text": "Sending Red Sox up two nothing.",
+      "start_time": 904.33,
+      "end_time": 906.01
+    },
+    {
+      "index": 103,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Witlock back at it against Bellinger who will file one back for strike.",
+      "raw_text": "Witlock back at it against Bellinger who will file one back for strike.",
+      "start_time": 906.01,
+      "end_time": 909.73
+    },
+    {
+      "index": 104,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "He's gone 1 for 2 with a base hit defensively.",
+      "raw_text": "He's gone 1 for 2 with a base hit defensively.",
+      "start_time": 909.73,
+      "end_time": 913.16
+    },
+    {
+      "index": 105,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Anthony now in right to you by Ali.",
+      "raw_text": "Anthony now in right to you by Ali.",
+      "start_time": 913.16,
+      "end_time": 937.08
+    },
+    {
+      "index": 106,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Visit your local Tri State out again.",
+      "raw_text": "Visit your local Tri State out again.",
+      "start_time": 937.97,
+      "end_time": 939.81
+    },
+    {
+      "index": 107,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Request your food Service catalog today.",
+      "raw_text": "Request your food Service catalog today.",
+      "start_time": 942.37,
+      "end_time": 944.29
+    },
+    {
+      "index": 108,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Mason.com you got stuff over there?",
+      "raw_text": "Mason.com you got stuff over there?",
+      "start_time": 944.61,
+      "end_time": 988.22
+    },
+    {
+      "index": 109,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "You checking over there if you want it?",
+      "raw_text": "You checking over there if you want it?",
+      "start_time": 989.57,
+      "end_time": 991.01
+    },
+    {
+      "index": 110,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Well, we did.",
+      "raw_text": "Well, we did.",
+      "start_time": 1031.97,
+      "end_time": 1032.49
+    },
+    {
+      "index": 111,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "He got through seven still high pitches, but he's really good.",
+      "raw_text": "He got through seven still high pitches, but he's really good.",
+      "start_time": 1032.49,
+      "end_time": 1036.53
+    },
+    {
+      "index": 112,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "As it filed off, he had two big double play turns today.",
+      "raw_text": "As it filed off, he had two big double play turns today.",
+      "start_time": 1037.33,
+      "end_time": 1040.37
+    },
+    {
+      "index": 113,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Three times on strikes right there.",
+      "raw_text": "Three times on strikes right there.",
+      "start_time": 1052.83,
+      "end_time": 1067.53
+    },
+    {
+      "index": 114,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "97 you mentioned he started going deep.",
+      "raw_text": "97 you mentioned he started going deep.",
+      "start_time": 1068.17,
+      "end_time": 1070.65
+    },
+    {
+      "index": 115,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Defense is tied in with it.",
+      "raw_text": "Defense is tied in with it.",
+      "start_time": 1070.81,
+      "end_time": 1072.37
+    },
+    {
+      "index": 116,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Right.",
+      "raw_text": "Right.",
+      "start_time": 1072.37,
+      "end_time": 1072.57
+    },
+    {
+      "index": 117,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "You don't shirt some of these double plays.",
+      "raw_text": "You don't shirt some of these double plays.",
+      "start_time": 1072.57,
+      "end_time": 1074.09
+    },
+    {
+      "index": 118,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "He's not going to see.",
+      "raw_text": "He's not going to see.",
+      "start_time": 1074.09,
+      "end_time": 1091.05
+    },
+    {
+      "index": 119,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Kind of waiting for this type of home stand for a long, long time.",
+      "raw_text": "Kind of waiting for this type of home stand for a long, long time.",
+      "start_time": 1098.74,
+      "end_time": 1103.22
+    },
+    {
+      "index": 120,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Right.",
+      "raw_text": "Right.",
+      "start_time": 1103.86,
+      "end_time": 1104.26
+    },
+    {
+      "index": 121,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Waiting for a stretch like this.",
+      "raw_text": "Waiting for a stretch like this.",
+      "start_time": 1127.16,
+      "end_time": 1128.6
+    },
+    {
+      "index": 122,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Wow.",
+      "raw_text": "Wow.",
+      "start_time": 1129,
+      "end_time": 1129.48
+    },
+    {
+      "index": 123,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Pitching combined with the defense behind it.",
+      "raw_text": "Pitching combined with the defense behind it.",
+      "start_time": 1130.68,
+      "end_time": 1132.96
+    },
+    {
+      "index": 124,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "It hasn't been really driven by the offense.",
+      "raw_text": "It hasn't been really driven by the offense.",
+      "start_time": 1132.96,
+      "end_time": 1134.88
+    },
+    {
+      "index": 125,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "They've been doing enough.",
+      "raw_text": "They've been doing enough.",
+      "start_time": 1134.88,
+      "end_time": 1135.96
+    },
+    {
+      "index": 126,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Makes a great pitch.",
+      "raw_text": "Makes a great pitch.",
+      "start_time": 1136.52,
+      "end_time": 1137.52
+    },
+    {
+      "index": 127,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "He did enough.",
+      "raw_text": "He did enough.",
+      "start_time": 1137.52,
+      "end_time": 1138.24
+    },
+    {
+      "index": 128,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "But it was a public pitching Then he finally had this offset.",
+      "raw_text": "But it was a public pitching Then he finally had this offset.",
+      "start_time": 1138.24,
+      "end_time": 1141.68
+    },
+    {
+      "index": 129,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "As I said, now you got to go in the row play the bas.",
+      "raw_text": "As I said, now you got to go in the row play the bas.",
+      "start_time": 1141.68,
+      "end_time": 1144.84
+    },
+    {
+      "index": 130,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "What do you see my love?",
+      "raw_text": "What do you see my love?",
+      "start_time": 1148.85,
+      "end_time": 1149.89
+    },
+    {
+      "index": 131,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "This Red Sox win.",
+      "raw_text": "This Red Sox win.",
+      "start_time": 1157.33,
+      "end_time": 1158.53
+    },
+    {
+      "index": 132,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Presented by Morgan and Morgan, America's largest injury law firm.",
+      "raw_text": "Presented by Morgan and Morgan, America's largest injury law firm.",
+      "start_time": 1158.53,
+      "end_time": 1162.05
+    },
+    {
+      "index": 133,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Stay tuned WB Mason X Ratings live of TC and Jim breaking it down.",
+      "raw_text": "Stay tuned WB Mason X Ratings live of TC and Jim breaking it down.",
+      "start_time": 1162.05,
+      "end_time": 1166.85
+    },
+    {
+      "index": 134,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Jamai will be talking with Garrett Whitlock as we say happy Father's Day.",
+      "raw_text": "Jamai will be talking with Garrett Whitlock as we say happy Father's Day.",
+      "start_time": 1167.17,
+      "end_time": 1171.81
+    },
+    {
+      "index": 135,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "You know in Boston every now and throwback days when you bring up big bags and jerseys and the baggier the better.",
+      "raw_text": "You know in Boston every now and throwback days when you bring up big bags and jerseys and the baggier the better.",
+      "start_time": 1185.2,
+      "end_time": 1190.8
+    },
+    {
+      "index": 136,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "I broke into the be everybody's wearing really baggy pants and as the years go along I started wearing these skinny mini tight pants that look like they were feeling hot.",
+      "raw_text": "I broke into the be everybody's wearing really baggy pants and as the years go along I started wearing these skinny mini tight pants that look like they were feeling hot.",
+      "start_time": 1190.8,
+      "end_time": 1199.36
+    },
+    {
+      "index": 137,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "So by the time I was with the boss I really wanted to wear where the baggier is better.",
+      "raw_text": "So by the time I was with the boss I really wanted to wear where the baggier is better.",
+      "start_time": 1199.44,
+      "end_time": 1203.92
+    },
+    {
+      "index": 138,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "We just want to keep flying around in the house hill there having a good time.",
+      "raw_text": "We just want to keep flying around in the house hill there having a good time.",
+      "start_time": 1203.92,
+      "end_time": 1207.28
+    },
+    {
+      "index": 139,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "At a.m.",
+      "raw_text": "At a.m.",
+      "start_time": 1209.76,
+      "end_time": 1210.31
+    },
+    {
+      "index": 140,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "p.m.",
+      "raw_text": "p.m.",
+      "start_time": 1210.37,
+      "end_time": 1210.64
+    },
+    {
+      "index": 141,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "We make cookies in store with real butter.",
+      "raw_text": "We make cookies in store with real butter.",
+      "start_time": 1210.64,
+      "end_time": 1212.72
+    },
+    {
+      "index": 142,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "These taste just like the cookies my grandma makes at home.",
+      "raw_text": "These taste just like the cookies my grandma makes at home.",
+      "start_time": 1212.72,
+      "end_time": 1215.2
+    },
+    {
+      "index": 143,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Accurate, huh?",
+      "raw_text": "Accurate, huh?",
+      "start_time": 1215.2,
+      "end_time": 1216.12
+    },
+    {
+      "index": 144,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "She I think no grandma Lola Convenience too much good stuff.",
+      "raw_text": "She I think no grandma Lola Convenience too much good stuff.",
+      "start_time": 1216.12,
+      "end_time": 1224.32
+    },
+    {
+      "index": 145,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "If you're the national and you're starting to see the building blocks being thing that you expect, they're really good.",
+      "raw_text": "If you're the national and you're starting to see the building blocks being thing that you expect, they're really good.",
+      "start_time": 1224.72,
+      "end_time": 1231.85
+    },
+    {
+      "index": 146,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Bobby Witt Jr.",
+      "raw_text": "Bobby Witt Jr.",
+      "start_time": 1257.13,
+      "end_time": 1258.53
+    },
+    {
+      "index": 147,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Is piping.",
+      "raw_text": "Is piping.",
+      "start_time": 1258.53,
+      "end_time": 1259.77
+    },
+    {
+      "index": 148,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Guess who that is.",
+      "raw_text": "Guess who that is.",
+      "start_time": 1287.58,
+      "end_time": 1288.46
+    },
+    {
+      "index": 149,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Roger McDowell.",
+      "raw_text": "Roger McDowell.",
+      "start_time": 1288.7,
+      "end_time": 1289.98
+    },
+    {
+      "index": 150,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Jackie.",
+      "raw_text": "Jackie.",
+      "start_time": 1289.98,
+      "end_time": 1290.5
+    },
+    {
+      "index": 151,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Now he has his uniform on upside down with the shoes on the hand and it looks like he's talking on his hands.",
+      "raw_text": "Now he has his uniform on upside down with the shoes on the hand and it looks like he's talking on his hands.",
+      "start_time": 1290.5,
+      "end_time": 1297.26
+    },
+    {
+      "index": 152,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "That's his cap hanging down.",
+      "raw_text": "That's his cap hanging down.",
+      "start_time": 1298.86,
+      "end_time": 1300.54
+    },
+    {
+      "index": 153,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "That's supposed to be his hand board.",
+      "raw_text": "That's supposed to be his hand board.",
+      "start_time": 1301.98,
+      "end_time": 1310.24
+    },
+    {
+      "index": 154,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "The power of baseball goes beyond the field.",
+      "raw_text": "The power of baseball goes beyond the field.",
+      "start_time": 1313.28,
+      "end_time": 1315.6
+    },
+    {
+      "index": 155,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Reaching out and helping land Cool.",
+      "raw_text": "Reaching out and helping land Cool.",
+      "start_time": 1318.96,
+      "end_time": 1330.56
+    },
+    {
+      "index": 156,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Welcome to the Wasabi Fenway studios here at Fenway park in Boston.",
+      "raw_text": "Welcome to the Wasabi Fenway studios here at Fenway park in Boston.",
+      "start_time": 1340.41,
+      "end_time": 1344.81
+    },
+    {
+      "index": 157,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "It's wbx.",
+      "raw_text": "It's wbx.",
+      "start_time": 1344.81,
+      "end_time": 1346.01
+    },
+    {
+      "index": 158,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "All sellouts, all electric old nail biters and all red socks which I have a replit app where I am successfully ingesting every Fireflies meeting that I have into a nice markdown formatted MD file.",
+      "raw_text": "All sellouts, all electric old nail biters and all red socks which I have a replit app where I am successfully ingesting every Fireflies meeting that I have into a nice markdown formatted MD file.",
+      "start_time": 1357.45,
+      "end_time": 1381.92
+    },
+    {
+      "index": 159,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Now what I need to do is get the app to get those MD files into my Obsidian vault that I sync through Obsidian.",
+      "raw_text": "Now what I need to do is get the app to get those MD files into my Obsidian vault that I sync through Obsidian.",
+      "start_time": 1383.2,
+      "end_time": 1397.53
+    },
+    {
+      "index": 160,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "I can imagine there's a lot of different ways to do this.",
+      "raw_text": "I can imagine there's a lot of different ways to do this.",
+      "start_time": 1398.57,
+      "end_time": 1400.89
+    },
+    {
+      "index": 161,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Please research it for me and give me a plan.",
+      "raw_text": "Please research it for me and give me a plan.",
+      "start_time": 1401.21,
+      "end_time": 1405.05
+    },
+    {
+      "index": 162,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Night back in the playoff race it that's the back worried about it stacking up it in the water.",
+      "raw_text": "Night back in the playoff race it that's the back worried about it stacking up it in the water.",
+      "start_time": 1413.7,
+      "end_time": 1519.3
+    },
+    {
+      "index": 163,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "If he carries you know like if he carries it on the green it's not going to spin back which maybe is good.",
+      "raw_text": "If he carries you know like if he carries it on the green it's not going to spin back which maybe is good.",
+      "start_time": 1519.3,
+      "end_time": 1524.9
+    },
+    {
+      "index": 164,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Okay, almost right.",
+      "raw_text": "Okay, almost right.",
+      "start_time": 1526.34,
+      "end_time": 1543.92
+    },
+    {
+      "index": 165,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Just very quick, two and a half feet talk so much about tires wet dry.",
+      "raw_text": "Just very quick, two and a half feet talk so much about tires wet dry.",
+      "start_time": 1554.64,
+      "end_time": 1658.2
+    },
+    {
+      "index": 166,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "So now that everybody's on dry I went back.",
+      "raw_text": "So now that everybody's on dry I went back.",
+      "start_time": 1658.2,
+      "end_time": 1659.959
+    },
+    {
+      "index": 167,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "You know Kyle Larson told Carl and Corey on the pre race stage that he said about 12 or 13 laps switch goes off, but not in a good way.",
+      "raw_text": "You know Kyle Larson told Carl and Corey on the pre race stage that he said about 12 or 13 laps switch goes off, but not in a good way.",
+      "start_time": 1659.959,
+      "end_time": 1666.44
+    },
+    {
+      "index": 168,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Right.",
+      "raw_text": "Right.",
+      "start_time": 1666.52,
+      "end_time": 1666.84
+    },
+    {
+      "index": 169,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "The tires kind of lose a little grip.",
+      "raw_text": "The tires kind of lose a little grip.",
+      "start_time": 1666.84,
+      "end_time": 1668.24
+    },
+    {
+      "index": 170,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Lose a little grip.",
+      "raw_text": "Lose a little grip.",
+      "start_time": 1668.24,
+      "end_time": 1668.96
+    },
+    {
+      "index": 171,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Then you get to double digits and the rear tires just seem to go away.",
+      "raw_text": "Then you get to double digits and the rear tires just seem to go away.",
+      "start_time": 1668.96,
+      "end_time": 1671.8
+    },
+    {
+      "index": 172,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "They start slipping and sliding.",
+      "raw_text": "They start slipping and sliding.",
+      "start_time": 1672.18,
+      "end_time": 1673.7
+    },
+    {
+      "index": 173,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "So now we're at a more traditional track surface.",
+      "raw_text": "So now we're at a more traditional track surface.",
+      "start_time": 1673.86,
+      "end_time": 1676.54
+    },
+    {
+      "index": 174,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "It's going to be interest to see these cars that have, you know, high single digits on their tires already.",
+      "raw_text": "It's going to be interest to see these cars that have, you know, high single digits on their tires already.",
+      "start_time": 1676.54,
+      "end_time": 1680.7
+    },
+    {
+      "index": 175,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "How long the grip stays.",
+      "raw_text": "How long the grip stays.",
+      "start_time": 1680.7,
+      "end_time": 1682.02
+    },
+    {
+      "index": 176,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Again, so many curiosities about this race.",
+      "raw_text": "Again, so many curiosities about this race.",
+      "start_time": 1683.78,
+      "end_time": 1686.5
+    },
+    {
+      "index": 177,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Let's go to Marty.",
+      "raw_text": "Let's go to Marty.",
+      "start_time": 1686.5,
+      "end_time": 1687.3
+    },
+    {
+      "index": 178,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Let's chat with Kyle Busch out the Intel Care Center.",
+      "raw_text": "Let's chat with Kyle Busch out the Intel Care Center.",
+      "start_time": 1687.86,
+      "end_time": 1690.3
+    },
+    {
+      "index": 179,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "They tried to make repairs to your car, but man, this has been a chaotic race.",
+      "raw_text": "They tried to make repairs to your car, but man, this has been a chaotic race.",
+      "start_time": 1690.3,
+      "end_time": 1694.1
+    },
+    {
+      "index": 180,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Kyle, what happened when you're spin just in the rating and I went down into 11 and got on the brakes pretty hard and everything was fine, everything was comfortable.",
+      "raw_text": "Kyle, what happened when you're spin just in the rating and I went down into 11 and got on the brakes pretty hard and everything was fine, everything was comfortable.",
+      "start_time": 1694.1,
+      "end_time": 1702.98
+    },
+    {
+      "index": 181,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Stopped really good and I'm like, okay, I can be a little bit more aggressive this time.",
+      "raw_text": "Stopped really good and I'm like, okay, I can be a little bit more aggressive this time.",
+      "start_time": 1702.98,
+      "end_time": 1705.94
+    },
+    {
+      "index": 182,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Get back into one and there's a sand marker.",
+      "raw_text": "Get back into one and there's a sand marker.",
+      "start_time": 1706.18,
+      "end_time": 1710.66
+    },
+    {
+      "index": 183,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "It's the bridge.",
+      "raw_text": "It's the bridge.",
+      "start_time": 1710.66,
+      "end_time": 1711.3
+    },
+    {
+      "index": 184,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "And we've been going much past the bridge, you know, all day on drives.",
+      "raw_text": "And we've been going much past the bridge, you know, all day on drives.",
+      "start_time": 1711.38,
+      "end_time": 1714.22
+    },
+    {
+      "index": 185,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "And so, you know, I figured it's going to be fine.",
+      "raw_text": "And so, you know, I figured it's going to be fine.",
+      "start_time": 1714.22,
+      "end_time": 1716.58
+    },
+    {
+      "index": 186,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "And as soon as I went to the break, it was just on ice and I was just sliding.",
+      "raw_text": "And as soon as I went to the break, it was just on ice and I was just sliding.",
+      "start_time": 1716.58,
+      "end_time": 1719.82
+    },
+    {
+      "index": 187,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "And so about a second and a half or so I was just trying to figure out which direction to go.",
+      "raw_text": "And so about a second and a half or so I was just trying to figure out which direction to go.",
+      "start_time": 1719.82,
+      "end_time": 1723.7
+    },
+    {
+      "index": 188,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "And then I was like, I got to turn this thing around backwards because I something that nails.",
+      "raw_text": "And then I was like, I got to turn this thing around backwards because I something that nails.",
+      "start_time": 1723.7,
+      "end_time": 1726.44
+    },
+    {
+      "index": 189,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "So hate it for all those that were involved in my mishap there and hate it for Lucas Oil and of course rcr, acr, the guys.",
+      "raw_text": "So hate it for all those that were involved in my mishap there and hate it for Lucas Oil and of course rcr, acr, the guys.",
+      "start_time": 1726.68,
+      "end_time": 1734.32
+    },
+    {
+      "index": 190,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "I mean, Carter yesterday qualifying was really good.",
+      "raw_text": "I mean, Carter yesterday qualifying was really good.",
+      "start_time": 1734.32,
+      "end_time": 1736.72
+    },
+    {
+      "index": 191,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "It felt like we were going to be really sporty in the dry.",
+      "raw_text": "It felt like we were going to be really sporty in the dry.",
+      "start_time": 1736.72,
+      "end_time": 1738.52
+    },
+    {
+      "index": 192,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "I hate that the rain came and now it's nice and dry.",
+      "raw_text": "I hate that the rain came and now it's nice and dry.",
+      "start_time": 1738.52,
+      "end_time": 1741.2
+    },
+    {
+      "index": 193,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "So just had to go.",
+      "raw_text": "So just had to go.",
+      "start_time": 1741.2,
+      "end_time": 1743.24
+    },
+    {
+      "index": 194,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "More points in another week.",
+      "raw_text": "More points in another week.",
+      "start_time": 1743.4,
+      "end_time": 1744.6
+    },
+    {
+      "index": 195,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Coming into this race, going to lose a lot of points, but I don't count him out.",
+      "raw_text": "Coming into this race, going to lose a lot of points, but I don't count him out.",
+      "start_time": 1750.04,
+      "end_time": 1754.55
+    },
+    {
+      "index": 196,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Back against the wall is a dangerous guy with the Chargers in the playoffs.",
+      "raw_text": "Back against the wall is a dangerous guy with the Chargers in the playoffs.",
+      "start_time": 1756.63,
+      "end_time": 1762.15
+    },
+    {
+      "index": 197,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "I was so excited about him today because after he was on the road course earlier this year, circuit the Americas came in.",
+      "raw_text": "I was so excited about him today because after he was on the road course earlier this year, circuit the Americas came in.",
+      "start_time": 1762.39,
+      "end_time": 1768.39
+    },
+    {
+      "index": 198,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "We talk about where he was now.44 below.",
+      "raw_text": "We talk about where he was now.44 below.",
+      "start_time": 1769.19,
+      "end_time": 1771.43
+    },
+    {
+      "index": 199,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Long way to go with 10 races remaining here in Mexico City.",
+      "raw_text": "Long way to go with 10 races remaining here in Mexico City.",
+      "start_time": 1771.91,
+      "end_time": 1798.81
+    },
+    {
+      "index": 200,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "These restarts are going to be more aggressive.",
+      "raw_text": "These restarts are going to be more aggressive.",
+      "start_time": 1806.18,
+      "end_time": 1808.02
+    },
+    {
+      "index": 201,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "We used to watch nascar.",
+      "raw_text": "We used to watch nascar.",
+      "start_time": 1809.94,
+      "end_time": 1811.3
+    },
+    {
+      "index": 202,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "I wonder if you remember when we were in the other house surprising everybody made it through.",
+      "raw_text": "I wonder if you remember when we were in the other house surprising everybody made it through.",
+      "start_time": 1811.3,
+      "end_time": 1830.26
+    },
+    {
+      "index": 203,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Know how many more times we can do this and still get the whole field through turn one, two and three without carnage and to turn forward.",
+      "raw_text": "Know how many more times we can do this and still get the whole field through turn one, two and three without carnage and to turn forward.",
+      "start_time": 1830.61,
+      "end_time": 1839.49
+    },
+    {
+      "index": 204,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Bell tried to get position crowd and centric but centered.",
+      "raw_text": "Bell tried to get position crowd and centric but centered.",
+      "start_time": 1842.21,
+      "end_time": 1845.25
+    },
+    {
+      "index": 205,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "The advantage as they get the esses has to give it up it's so tight through the s is way tighter than it actually looks on camera.",
+      "raw_text": "The advantage as they get the esses has to give it up it's so tight through the s is way tighter than it actually looks on camera.",
+      "start_time": 1845.25,
+      "end_time": 1852.49
+    },
+    {
+      "index": 206,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "They have to almost stop into that person s.",
+      "raw_text": "They have to almost stop into that person s.",
+      "start_time": 1852.49,
+      "end_time": 1855.49
+    },
+    {
+      "index": 207,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Turn 10.",
+      "raw_text": "Turn 10.",
+      "start_time": 1861.82,
+      "end_time": 1862.38
+    },
+    {
+      "index": 208,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Now you have to be very careful because if we turn basically now I'm on off track or going over the curves.",
+      "raw_text": "Now you have to be very careful because if we turn basically now I'm on off track or going over the curves.",
+      "start_time": 1864.06,
+      "end_time": 1869.98
+    },
+    {
+      "index": 209,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Is there any water in any of the rubble strips like right here, driver's left.",
+      "raw_text": "Is there any water in any of the rubble strips like right here, driver's left.",
+      "start_time": 1869.98,
+      "end_time": 1873.3
+    },
+    {
+      "index": 210,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Or on these interior curves, the stadium.",
+      "raw_text": "Or on these interior curves, the stadium.",
+      "start_time": 1873.3,
+      "end_time": 1875.46
+    },
+    {
+      "index": 211,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Can you get up on there and find a few catch of water?",
+      "raw_text": "Can you get up on there and find a few catch of water?",
+      "start_time": 1875.46,
+      "end_time": 1877.54
+    },
+    {
+      "index": 212,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Lose grip Lighting been good today.",
+      "raw_text": "Lose grip Lighting been good today.",
+      "start_time": 1877.54,
+      "end_time": 1881.02
+    },
+    {
+      "index": 213,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Austin Dillon having a nice afternoon.",
+      "raw_text": "Austin Dillon having a nice afternoon.",
+      "start_time": 1881.67,
+      "end_time": 1883.99
+    },
+    {
+      "index": 214,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "He's worked his way to the top 10.",
+      "raw_text": "He's worked his way to the top 10.",
+      "start_time": 1883.99,
+      "end_time": 1885.75
+    },
+    {
+      "index": 215,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "There's J.E.",
+      "raw_text": "There's J.E.",
+      "start_time": 1885.83,
+      "end_time": 1886.55
+    },
+    {
+      "index": 216,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "elliot, seven career Mets on the road versus number nine, a player at night.",
+      "raw_text": "elliot, seven career Mets on the road versus number nine, a player at night.",
+      "start_time": 1886.55,
+      "end_time": 1891.67
+    },
+    {
+      "index": 217,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "The drive on board camera.",
+      "raw_text": "The drive on board camera.",
+      "start_time": 1892.87,
+      "end_time": 1894.59
+    },
+    {
+      "index": 218,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Texas down the long front straightaway almost 4,000ft from turn 15 to turn 1.",
+      "raw_text": "Texas down the long front straightaway almost 4,000ft from turn 15 to turn 1.",
+      "start_time": 1894.59,
+      "end_time": 1900.15
+    },
+    {
+      "index": 219,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "You see with this thin air at 7,300ft, the draft is just not in the same effect.",
+      "raw_text": "You see with this thin air at 7,300ft, the draft is just not in the same effect.",
+      "start_time": 1903.91,
+      "end_time": 1908.47
+    },
+    {
+      "index": 220,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Any other racetrack that guy would have pulled up to the car in front of the spin air is just not the advantage.",
+      "raw_text": "Any other racetrack that guy would have pulled up to the car in front of the spin air is just not the advantage.",
+      "start_time": 1908.85,
+      "end_time": 1914.21
+    },
+    {
+      "index": 221,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Trying to have a turn three or struggle just a little bit right there.",
+      "raw_text": "Trying to have a turn three or struggle just a little bit right there.",
+      "start_time": 1926.21,
+      "end_time": 1929.73
+    },
+    {
+      "index": 222,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Probably under the defense here and right.",
+      "raw_text": "Probably under the defense here and right.",
+      "start_time": 1931.33,
+      "end_time": 1933.33
+    },
+    {
+      "index": 223,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Only turn four.",
+      "raw_text": "Only turn four.",
+      "start_time": 1933.33,
+      "end_time": 1934.29
+    },
+    {
+      "index": 224,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Another car off track.",
+      "raw_text": "Another car off track.",
+      "start_time": 1936.73,
+      "end_time": 1937.69
+    },
+    {
+      "index": 225,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "The 22 at Logano goes drivers left, Mrs.",
+      "raw_text": "The 22 at Logano goes drivers left, Mrs.",
+      "start_time": 1937.69,
+      "end_time": 1940.29
+    },
+    {
+      "index": 226,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Turk four gets over to the pavement.",
+      "raw_text": "Turk four gets over to the pavement.",
+      "start_time": 1940.29,
+      "end_time": 1942.57
+    },
+    {
+      "index": 227,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Rejoins four and 11 has been a real popular spot.",
+      "raw_text": "Rejoins four and 11 has been a real popular spot.",
+      "start_time": 1942.57,
+      "end_time": 1947.93
+    },
+    {
+      "index": 228,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Drivers missing the mark, leaving the racetrack.",
+      "raw_text": "Drivers missing the mark, leaving the racetrack.",
+      "start_time": 1949.13,
+      "end_time": 1952.81
+    },
+    {
+      "index": 229,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "It's been comfortable as far as the lead goes throughout most of the race.",
+      "raw_text": "It's been comfortable as far as the lead goes throughout most of the race.",
+      "start_time": 1952.81,
+      "end_time": 1956.17
+    },
+    {
+      "index": 230,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "But now here we are.",
+      "raw_text": "But now here we are.",
+      "start_time": 1956.17,
+      "end_time": 1957.13
+    },
+    {
+      "index": 231,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Chain about a half a second back, putting pressure on.",
+      "raw_text": "Chain about a half a second back, putting pressure on.",
+      "start_time": 1958.57,
+      "end_time": 1961.13
+    },
+    {
+      "index": 232,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "He has just led the most laps today.",
+      "raw_text": "He has just led the most laps today.",
+      "start_time": 1963.54,
+      "end_time": 1965.22
+    },
+    {
+      "index": 233,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "He comes by.",
+      "raw_text": "He comes by.",
+      "start_time": 1966.02,
+      "end_time": 1966.9
+    },
+    {
+      "index": 234,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Next time around it'll be 17 out front every time.",
+      "raw_text": "Next time around it'll be 17 out front every time.",
+      "start_time": 1967.3,
+      "end_time": 1977.699
+    },
+    {
+      "index": 235,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "He comes out of a corner straightaway, looks in the mirror.",
+      "raw_text": "He comes out of a corner straightaway, looks in the mirror.",
+      "start_time": 1977.699,
+      "end_time": 1980.1
+    },
+    {
+      "index": 236,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Right now he's on his own.",
+      "raw_text": "Right now he's on his own.",
+      "start_time": 1987.39,
+      "end_time": 1988.75
+    },
+    {
+      "index": 237,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Really impressed with Ty Gibbs.",
+      "raw_text": "Really impressed with Ty Gibbs.",
+      "start_time": 1990.59,
+      "end_time": 1993.31
+    },
+    {
+      "index": 238,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Junkie's racing to give him this kind of a race car.",
+      "raw_text": "Junkie's racing to give him this kind of a race car.",
+      "start_time": 1996.19,
+      "end_time": 1998.63
+    },
+    {
+      "index": 239,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "What an incredibly quick race car.",
+      "raw_text": "What an incredibly quick race car.",
+      "start_time": 1998.63,
+      "end_time": 2000.83
+    },
+    {
+      "index": 240,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Talk about momentum in racing.",
+      "raw_text": "Talk about momentum in racing.",
+      "start_time": 2002.909,
+      "end_time": 2005.03
+    },
+    {
+      "index": 241,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "The carryover from last week.",
+      "raw_text": "The carryover from last week.",
+      "start_time": 2005.03,
+      "end_time": 2006.59
+    },
+    {
+      "index": 242,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Best run of the year.",
+      "raw_text": "Best run of the year.",
+      "start_time": 2006.59,
+      "end_time": 2007.47
+    },
+    {
+      "index": 243,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Third in Michigan.",
+      "raw_text": "Third in Michigan.",
+      "start_time": 2007.47,
+      "end_time": 2009.07
+    },
+    {
+      "index": 244,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Not expected there because that's a track and a noted road racer.",
+      "raw_text": "Not expected there because that's a track and a noted road racer.",
+      "start_time": 2009.23,
+      "end_time": 2014.38
+    },
+    {
+      "index": 245,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Twelve wins in the xfinity series.",
+      "raw_text": "Twelve wins in the xfinity series.",
+      "start_time": 2014.38,
+      "end_time": 2016.26
+    },
+    {
+      "index": 246,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Four of those have come on the road.",
+      "raw_text": "Four of those have come on the road.",
+      "start_time": 2016.34,
+      "end_time": 2018.34
+    },
+    {
+      "index": 247,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Here's him.",
+      "raw_text": "Here's him.",
+      "start_time": 2018.34,
+      "end_time": 2018.98
+    },
+    {
+      "index": 248,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Yeah.",
+      "raw_text": "Yeah.",
+      "start_time": 2019.54,
+      "end_time": 2019.9
+    },
+    {
+      "index": 249,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Tom gives out at the point.",
+      "raw_text": "Tom gives out at the point.",
+      "start_time": 2019.9,
+      "end_time": 2021.22
+    },
+    {
+      "index": 250,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Their team was very confident in their driver's ability, especially in group forces like.",
+      "raw_text": "Their team was very confident in their driver's ability, especially in group forces like.",
+      "start_time": 2021.22,
+      "end_time": 2025.02
+    },
+    {
+      "index": 251,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "He's one of the most aggressive drivers that suits you at this style course.",
+      "raw_text": "He's one of the most aggressive drivers that suits you at this style course.",
+      "start_time": 2025.02,
+      "end_time": 2029.62
+    },
+    {
+      "index": 252,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "And on top of that, he knows the track limits as well as having car control.",
+      "raw_text": "And on top of that, he knows the track limits as well as having car control.",
+      "start_time": 2029.78,
+      "end_time": 2033.74
+    },
+    {
+      "index": 253,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Right now though, the spotter is telling when he tries to cross the architect the inside.",
+      "raw_text": "Right now though, the spotter is telling when he tries to cross the architect the inside.",
+      "start_time": 2033.74,
+      "end_time": 2037.66
+    },
+    {
+      "index": 254,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Now he used to.",
+      "raw_text": "Now he used to.",
+      "start_time": 2037.66,
+      "end_time": 2038.42
+    },
+    {
+      "index": 255,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "I don't have what he has.",
+      "raw_text": "I don't have what he has.",
+      "start_time": 2044.25,
+      "end_time": 2046.01
+    },
+    {
+      "index": 256,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "He told us about chief Steven Morgan.",
+      "raw_text": "He told us about chief Steven Morgan.",
+      "start_time": 2046.09,
+      "end_time": 2048.73
+    },
+    {
+      "index": 257,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "I just need a little more overall grip but the long run seem to favor SVG just a little bit.",
+      "raw_text": "I just need a little more overall grip but the long run seem to favor SVG just a little bit.",
+      "start_time": 2048.73,
+      "end_time": 2054.09
+    },
+    {
+      "index": 258,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Yeah.",
+      "raw_text": "Yeah.",
+      "start_time": 2054.97,
+      "end_time": 2055.33
+    },
+    {
+      "index": 259,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "How about the drive by Austin centered guys and the guts of ride wants to stick with the plan even when they felt all the way back to 31st year early in this race.",
+      "raw_text": "How about the drive by Austin centered guys and the guts of ride wants to stick with the plan even when they felt all the way back to 31st year early in this race.",
+      "start_time": 2055.33,
+      "end_time": 2063.13
+    },
+    {
+      "index": 260,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Right now Austin S cinder still at fourth place.",
+      "raw_text": "Right now Austin S cinder still at fourth place.",
+      "start_time": 2063.13,
+      "end_time": 2065.54
+    },
+    {
+      "index": 261,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Yes.",
+      "raw_text": "Yes.",
+      "start_time": 2065.86,
+      "end_time": 2066.26
+    },
+    {
+      "index": 262,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "He's gonna have to shorten at this stage because of fuel.",
+      "raw_text": "He's gonna have to shorten at this stage because of fuel.",
+      "start_time": 2066.26,
+      "end_time": 2068.7
+    },
+    {
+      "index": 263,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "He's the only guy on the follow would be guys.",
+      "raw_text": "He's the only guy on the follow would be guys.",
+      "start_time": 2068.7,
+      "end_time": 2074.54
+    },
+    {
+      "index": 264,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Does this change the strategy at all tires?",
+      "raw_text": "Does this change the strategy at all tires?",
+      "start_time": 2074.54,
+      "end_time": 2080.3
+    },
+    {
+      "index": 265,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "That's the one that will.",
+      "raw_text": "That's the one that will.",
+      "start_time": 2080.3,
+      "end_time": 2081.3
+    },
+    {
+      "index": 266,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "I do think it may shift right.",
+      "raw_text": "I do think it may shift right.",
+      "start_time": 2081.46,
+      "end_time": 2082.9
+    },
+    {
+      "index": 267,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "He is on a much older tire that he is holding on now.",
+      "raw_text": "He is on a much older tire that he is holding on now.",
+      "start_time": 2082.9,
+      "end_time": 2085.66
+    },
+    {
+      "index": 268,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "I do think now the rain is gone that the wear will get worse on these tires.",
+      "raw_text": "I do think now the rain is gone that the wear will get worse on these tires.",
+      "start_time": 2085.66,
+      "end_time": 2089.98
+    },
+    {
+      "index": 269,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "But it is definitely not as bad.",
+      "raw_text": "But it is definitely not as bad.",
+      "start_time": 2089.98,
+      "end_time": 2091.64
+    },
+    {
+      "index": 270,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "We saw nearly two seconds call off in practice.",
+      "raw_text": "We saw nearly two seconds call off in practice.",
+      "start_time": 2091.64,
+      "end_time": 2093.8
+    },
+    {
+      "index": 271,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Cedric is keeping up fine on nearly 35 lap tired right now.",
+      "raw_text": "Cedric is keeping up fine on nearly 35 lap tired right now.",
+      "start_time": 2093.8,
+      "end_time": 2097.6
+    },
+    {
+      "index": 272,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "You know I talked to Brian Wilson on Friday prior to practice as crew chief and Brian, you know was concerned about everything was going to break down this weekend as all the crew chiefs were.",
+      "raw_text": "You know I talked to Brian Wilson on Friday prior to practice as crew chief and Brian, you know was concerned about everything was going to break down this weekend as all the crew chiefs were.",
+      "start_time": 2098.08,
+      "end_time": 2106.88
+    },
+    {
+      "index": 273,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "But when we saw him prior qualifying yesterday that a lot of optimism because of how things went in practice for everybody at team Pittsky.",
+      "raw_text": "But when we saw him prior qualifying yesterday that a lot of optimism because of how things went in practice for everybody at team Pittsky.",
+      "start_time": 2106.96,
+      "end_time": 2114.72
+    },
+    {
+      "index": 274,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "And despite the fact that everything got out of balance early in this race.",
+      "raw_text": "And despite the fact that everything got out of balance early in this race.",
+      "start_time": 2114.72,
+      "end_time": 2118.79
+    },
+    {
+      "index": 275,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "The two team winners at Taladega earlier this year hanging right in there.",
+      "raw_text": "The two team winners at Taladega earlier this year hanging right in there.",
+      "start_time": 2118.95,
+      "end_time": 2123.51
+    },
+    {
+      "index": 276,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "It's fourth behind Bell right in front of Byron.",
+      "raw_text": "It's fourth behind Bell right in front of Byron.",
+      "start_time": 2125.11,
+      "end_time": 2127.83
+    },
+    {
+      "index": 277,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Yeah, we talked a lot about the drivers and how they do their work.",
+      "raw_text": "Yeah, we talked a lot about the drivers and how they do their work.",
+      "start_time": 2129.03,
+      "end_time": 2131.55
+    },
+    {
+      "index": 278,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "It's not surprised to me that they feel that 88 might be better in the long run.",
+      "raw_text": "It's not surprised to me that they feel that 88 might be better in the long run.",
+      "start_time": 2131.55,
+      "end_time": 2134.95
+    },
+    {
+      "index": 279,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "You talked about using the clutch some practice qualifying how you said like a bow kind of take away some of the career.",
+      "raw_text": "You talked about using the clutch some practice qualifying how you said like a bow kind of take away some of the career.",
+      "start_time": 2135.03,
+      "end_time": 2141.67
+    },
+    {
+      "index": 280,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Can we talk about heel and toe where he'll use his left foot and his right foot all three metal distances and actually release the clutch on corner entry to actually have to turn the car, hit the car and actually even do that on high speed corners like the N.",
+      "raw_text": "Can we talk about heel and toe where he'll use his left foot and his right foot all three metal distances and actually release the clutch on corner entry to actually have to turn the car, hit the car and actually even do that on high speed corners like the N.",
+      "start_time": 2158.389,
+      "end_time": 2194.38
+    },
+    {
+      "index": 281,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Use the clutch a little bit to help the front tires or the rear tires follow the fronts and that will show up later in the race.",
+      "raw_text": "Use the clutch a little bit to help the front tires or the rear tires follow the fronts and that will show up later in the race.",
+      "start_time": 2195.2,
+      "end_time": 2201.68
+    },
+    {
+      "index": 282,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "We've got the front tire ball on the 43 car.",
+      "raw_text": "We've got the front tire ball on the 43 car.",
+      "start_time": 2201.68,
+      "end_time": 2203.8
+    },
+    {
+      "index": 283,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "We slid that one too many times.",
+      "raw_text": "We slid that one too many times.",
+      "start_time": 2203.8,
+      "end_time": 2205.2
+    },
+    {
+      "index": 284,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "So he comes big road.",
+      "raw_text": "So he comes big road.",
+      "start_time": 2207.52,
+      "end_time": 2208.6
+    },
+    {
+      "index": 285,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "It's not the same thing out of Bell.",
+      "raw_text": "It's not the same thing out of Bell.",
+      "start_time": 2208.6,
+      "end_time": 2209.96
+    },
+    {
+      "index": 286,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "He can slip that right through it three times and wait to see if that thing makes it to the pit stop.",
+      "raw_text": "He can slip that right through it three times and wait to see if that thing makes it to the pit stop.",
+      "start_time": 2209.96,
+      "end_time": 2213.76
+    },
+    {
+      "index": 287,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Yeah.",
+      "raw_text": "Yeah.",
+      "start_time": 2213.92,
+      "end_time": 2214.4
+    },
+    {
+      "index": 288,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "So to your point, I think SVG can match the 54 gibs on new tires straight up over the course of the run.",
+      "raw_text": "So to your point, I think SVG can match the 54 gibs on new tires straight up over the course of the run.",
+      "start_time": 2214.4,
+      "end_time": 2221.61
+    },
+    {
+      "index": 289,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "It does this, you know, this ability.",
+      "raw_text": "It does this, you know, this ability.",
+      "start_time": 2221.61,
+      "end_time": 2223.81
+    },
+    {
+      "index": 290,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "No one else in the field does this with a clutch pedal.",
+      "raw_text": "No one else in the field does this with a clutch pedal.",
+      "start_time": 2225.81,
+      "end_time": 2228.13
+    },
+    {
+      "index": 291,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Will that allow the closure gap.",
+      "raw_text": "Will that allow the closure gap.",
+      "start_time": 2228.13,
+      "end_time": 2230.05
+    },
+    {
+      "index": 292,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "When my doctor gave me breast tree for my crpd, things changed for me.",
+      "raw_text": "When my doctor gave me breast tree for my crpd, things changed for me.",
+      "start_time": 2238.93,
+      "end_time": 2243.73
+    },
+    {
+      "index": 293,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Breast tree gave me better breathing symptom improvement and reduced flare ups.",
+      "raw_text": "Breast tree gave me better breathing symptom improvement and reduced flare ups.",
+      "start_time": 2244.37,
+      "end_time": 2248.61
+    },
+    {
+      "index": 294,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Breast cream will replace a rescue inject if you're sudden from the problems.",
+      "raw_text": "Breast cream will replace a rescue inject if you're sudden from the problems.",
+      "start_time": 2249.06,
+      "end_time": 2251.94
+    },
+    {
+      "index": 295,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "It is not for asthma.",
+      "raw_text": "It is not for asthma.",
+      "start_time": 2251.94,
+      "end_time": 2253.02
+    },
+    {
+      "index": 296,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Tell your doctor if you have a heart condition or high blood pressure before taking it.",
+      "raw_text": "Tell your doctor if you have a heart condition or high blood pressure before taking it.",
+      "start_time": 2253.02,
+      "end_time": 2256.14
+    },
+    {
+      "index": 297,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Don't take breastfeed may increase your risk of thrush, pneumonia and osteoporosis.",
+      "raw_text": "Don't take breastfeed may increase your risk of thrush, pneumonia and osteoporosis.",
+      "start_time": 2256.14,
+      "end_time": 2261.1
+    },
+    {
+      "index": 298,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Call your doctor if worsened breathing, chest pain, mouth or tongue swelling, problems, urinating, vision changes or high pain occur.",
+      "raw_text": "Call your doctor if worsened breathing, chest pain, mouth or tongue swelling, problems, urinating, vision changes or high pain occur.",
+      "start_time": 2261.1,
+      "end_time": 2266.82
+    },
+    {
+      "index": 299,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Ask your doctor about breast Sailton Draft Games from race winners to driver, props and everything in between, the Draft Team Sportsbook is waving a green flag on all the action.",
+      "raw_text": "Ask your doctor about breast Sailton Draft Games from race winners to driver, props and everything in between, the Draft Team Sportsbook is waving a green flag on all the action.",
+      "start_time": 2266.9,
+      "end_time": 2327.36
+    },
+    {
+      "index": 300,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Speaking of green, it's how you can take a shot at Some this week DraftKings sportsbook is an operation operator of NASCAR.",
+      "raw_text": "Speaking of green, it's how you can take a shot at Some this week DraftKings sportsbook is an operation operator of NASCAR.",
+      "start_time": 2327.92,
+      "end_time": 2334.29
+    },
+    {
+      "index": 301,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "And this week DraftKings has an exclusive offer for racing fan.",
+      "raw_text": "And this week DraftKings has an exclusive offer for racing fan.",
+      "start_time": 2334.29,
+      "end_time": 2337.61
+    },
+    {
+      "index": 302,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Just download the apps and use the promo code speed when you sign up.",
+      "raw_text": "Just download the apps and use the promo code speed when you sign up.",
+      "start_time": 2337.69,
+      "end_time": 2341.53
+    },
+    {
+      "index": 303,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "That's true in racing and life.",
+      "raw_text": "That's true in racing and life.",
+      "start_time": 2358.47,
+      "end_time": 2360.47
+    },
+    {
+      "index": 304,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "When debt hits hard.",
+      "raw_text": "When debt hits hard.",
+      "start_time": 2360.71,
+      "end_time": 2361.99
+    },
+    {
+      "index": 305,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Actual debt relief helps you take control.",
+      "raw_text": "Actual debt relief helps you take control.",
+      "start_time": 2361.99,
+      "end_time": 2364.15
+    },
+    {
+      "index": 306,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Benefits pay less than you owe, less time than you think.",
+      "raw_text": "Benefits pay less than you owe, less time than you think.",
+      "start_time": 2364.55,
+      "end_time": 2367.39
+    },
+    {
+      "index": 307,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "From my friends, your finances national debt relief helps you back on track.",
+      "raw_text": "From my friends, your finances national debt relief helps you back on track.",
+      "start_time": 2367.39,
+      "end_time": 2371.47
+    },
+    {
+      "index": 308,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Visit natural debt relief.com and get started.",
+      "raw_text": "Visit natural debt relief.com and get started.",
+      "start_time": 2371.47,
+      "end_time": 2373.79
+    },
+    {
+      "index": 309,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Today it classic electronic music from the 80s.",
+      "raw_text": "Today it classic electronic music from the 80s.",
+      "start_time": 2373.79,
+      "end_time": 2410.73
+    },
+    {
+      "index": 310,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Goldie.",
+      "raw_text": "Goldie.",
+      "start_time": 2419.61,
+      "end_time": 2420.09
+    },
+    {
+      "index": 311,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Goldie.",
+      "raw_text": "Goldie.",
+      "start_time": 2420.09,
+      "end_time": 2420.41
+    },
+    {
+      "index": 312,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "Goldie.",
+      "raw_text": "Goldie.",
+      "start_time": 2420.41,
+      "end_time": 2420.73
+    },
+    {
+      "index": 313,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "It's okay, sweetie.",
+      "raw_text": "It's okay, sweetie.",
+      "start_time": 2420.73,
+      "end_time": 2421.61
+    },
+    {
+      "index": 314,
+      "speaker_name": "Adam Miller",
+      "speaker_id": 0,
+      "text": "It.",
+      "raw_text": "It.",
+      "start_time": 2431.57,
+      "end_time": 2431.81
+    }
+  ],
+  "summary": {
+    "keywords": [
+      "baseball",
+      "NASCAR",
+      "Replit",
+      "Obsidian",
+      "integration",
+      "markdown"
+    ],
+    "action_items": "\n**Adam Miller**\nResearch different methods to integrate MD files from Replit app into Obsidian vault that syncs through Obsidian (23:03)\nDevelop a plan for getting Fireflies meeting MD files into Obsidian vault (23:03)\n",
+    "outline": null,
+    "overview": "- Red Sox lead 2-0 against Yankees; Judge struggles with 9 strikeouts in 11 at-bats, highlighting offensive challenges.\n- Garrett Whitlock secures 5th win of the season, showcasing effective pitching for the Red Sox.\n- Yankees struggle with scoring; analysis reveals difficulty with runners in scoring positions during the series.\n- NASCAR race in Mexico City discusses tire strategy issues due to high elevation of 7,300 feet.\n- Kyle Busch involved in a spin incident during the race, emphasizing driver unpredictability in varying track conditions.\n- Transition of track conditions from wet to dry poses critical challenges for driver performance and strategy.\n- Adam's Replit app successfully ingests Fireflies meetings into markdown files, paving the way for integration discussions.\n- Need identified for comprehensive research on methods to integrate markdown files into Obsidian vault for improved workflow.\n- Emphasis on developing an implementation plan for smooth integration and synchronization in Obsidian.\n- Promotional content reviewed, including advertisements for Ralph's grocery store, Breo medication, and DraftKings sportsbook, illustrating the diverse marketing approach.",
+    "shorthand_bullet": "\u26be **Baseball Game Commentary - Red Sox vs Yankees** (00:00 - 14:52)\nRed Sox leading 2-0 in the eighth inning against Yankees\nJudge struggling with 9 strikeouts in 11 at-bats during the series\nGarrett Whitlock pitching for Red Sox with 5th win of season\nYankees having difficulty with runners in scoring position\nRed Sox defense making key double plays and defensive stops\nDiscussion of pitching strategy and player performance analysis\n\ud83c\udfc1 **NASCAR Race Coverage and Analysis** (14:55 - 37:08)\nCoverage of NASCAR race in Mexico City at 7,300 feet elevation\nDiscussion of tire strategy and grip issues on track surface\nKyle Busch incident and spin during the race\nAnalysis of track conditions transitioning from wet to dry\nCommentary on driver performance including Austin Dillon and Ty Gibbs\nTechnical discussion of clutch usage and driving techniques\n\ud83d\udcbb **Technical Development Request - Replit to Obsidian Integration** (23:03 - 23:03)\nAdam has a Replit app successfully ingesting Fireflies meetings into markdown files\nNeed to integrate these MD files into Obsidian vault that syncs through Obsidian\nRequest for research on different integration methods\nLooking for a comprehensive implementation plan\n\ud83d\udcfa **Commercial Advertisements and Promotional Content** (37:08 - 39:31)\nVarious commercial advertisements including Ralph's grocery store\nMedical advertisement for Breo medication for COPD\nDraftKings sportsbook promotional content for NASCAR betting\nNational debt relief services advertisement\nMultiple retail and service promotions throughout broadcast\n",
+    "bullet_gist": "\u26be Red Sox vs. Yankees: Red Sox lead 2-0, with Judge struggling significantly.\n\ud83c\udfc1 NASCAR Insights: Tire strategy discussed due to Mexico City's elevation challenges.\n\ud83d\udcbb Integration Progress: Adam's app aids in markdown file ingestion for streamlined workflows.\n\ud83d\udcc8 Scoring Issues: Yankees face difficulties with scoring, especially in critical situations.\n\ud83d\udcf0 Marketing Review: Promotional content for various brands illustrates a diverse marketing approach.",
+    "gist": "Discussion on sports performance, integration of tools, and marketing strategies.",
+    "short_summary": "The meeting covered various topics, including the Red Sox leading 2-0 against the Yankees, highlighting Aaron Judge's struggles with 9 strikeouts in 11 at-bats. Garrett Whitlock's effective pitching secured his 5th win of the season, while the Yankees faced challenges in scoring, particularly with runners in scoring positions. In NASCAR, tire strategy issues were discussed due to high elevation in Mexico City, alongside Kyle Busch's spin incident, illustrating driver unpredictability. The transition from wet to dry track conditions posed challenges for performance. Additionally, Adam's work on the Replit app for ingesting Fireflies meetings into markdown files was noted, emphasizing the need for research on integrating these files into Obsidian vaults for improved workflow, coupled with developing an implementation plan for successful synchronization. Furthermore, promotional content for Ralph's grocery store, Breo medication, and DraftKings sportsbook was reviewed, showcasing diverse marketing strategies.",
+    "short_overview": null,
+    "meeting_type": null,
+    "topics_discussed": null,
+    "transcript_chapters": []
+  },
+  "transcript_url": "https://app.fireflies.ai/view/01JXTKPH514H2045VMKBN1VSW1",
+  "meeting_link": "https://meet.google.com/tuu-cxov-tzu",
+  "calendar_id": null,
+  "cal_id": null,
+  "calendar_type": null
+}

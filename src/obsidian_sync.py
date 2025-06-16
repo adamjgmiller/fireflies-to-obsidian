@@ -47,7 +47,8 @@ class ObsidianSync:
             # Check for duplicates
             if self.check_duplicate(filename):
                 logger.warning(f"Meeting file already exists: {filename}")
-                return None
+                # Return the existing file path so it can be marked as processed
+                return file_path
             
             # Write content to file
             file_path.write_text(content, encoding='utf-8')
