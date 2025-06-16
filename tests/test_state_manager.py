@@ -44,7 +44,9 @@ class TestStateManager:
         # Verify loaded data
         assert manager.is_processed('meeting1')
         assert manager.is_processed('meeting2')
-        assert len(manager.processed_meetings) == 2
+        # Check through stats instead of direct attribute
+        stats = manager.get_stats()
+        assert stats['total_processed'] == 2
         assert manager.get_metadata('key') == 'value'
     
     def test_mark_processed(self, temp_state_file):
@@ -72,7 +74,9 @@ class TestStateManager:
         assert manager.is_processed('meeting1')
         assert manager.is_processed('meeting2')
         assert manager.is_processed('meeting3')
-        assert len(manager.processed_meetings) == 3
+        # Check through stats
+        stats = manager.get_stats()
+        assert stats['total_processed'] == 3
     
     def test_duplicate_marking(self, temp_state_file):
         """Test that marking same meeting twice doesn't duplicate."""
@@ -83,8 +87,9 @@ class TestStateManager:
         manager.mark_processed('meeting1')
         manager.mark_multiple_processed(['meeting1', 'meeting2'])
         
-        # Verify no duplicates
-        assert len(manager.processed_meetings) == 2
+        # Verify no duplicates through stats
+        stats = manager.get_stats()
+        assert stats['total_processed'] == 2
         
         # Check file
         with open(temp_state_file, 'r') as f:
@@ -139,7 +144,8 @@ class TestStateManager:
         manager.clear_state()
         
         # Verify cleared
-        assert len(manager.processed_meetings) == 0
+        stats = manager.get_stats()
+        assert stats['total_processed'] == 0
         assert not manager.is_processed('meeting1')
         assert manager.get_metadata('key') is None
         
@@ -169,9 +175,12 @@ class TestStateManager:
         with open(temp_state_file, 'w') as f:
             f.write('{"invalid": json content')
         
-        # Should start with empty state
+        # Should handle corrupted file gracefully
         manager = StateManager(temp_state_file)
-        assert len(manager.processed_meetings) == 0
+        # The corrupted file still exists, so it won't create a new one
+        # But _load_state should return empty state on error
+        stats = manager.get_stats()
+        assert stats['total_processed'] == 0
     
     def test_default_state_directory(self):
         """Test default state directory creation."""

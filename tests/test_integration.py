@@ -199,7 +199,8 @@ class TestIntegration:
         assert state_manager2.is_processed('meeting1')
         assert state_manager2.is_processed('meeting2')
         assert state_manager2.get_metadata('test_key') == 'test_value'
-        assert len(state_manager2.processed_meetings) == 2
+        stats = state_manager2.get_stats()
+        assert stats['total_processed'] == 2
     
     def test_test_mode_specific_meetings(self, temp_dirs):
         """Test processing specific meetings in test mode."""

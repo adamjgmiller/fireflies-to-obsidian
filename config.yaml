@@ -42,7 +42,7 @@ notifications:
 
 # Logging
 logging:
-  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  level: "DEBUG"  # DEBUG, INFO, WARNING, ERROR
   file_path: "logs/fireflies_sync.log"
   max_file_size_mb: 10
   backup_count: 5 
