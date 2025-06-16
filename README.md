@@ -2,7 +2,7 @@
 
 **One-line purpose**: Automatically sync Fireflies.ai meeting transcripts to your Obsidian vault every 15 seconds  
 **Core value**: Eliminates manual copying of meeting notes, providing immediate access to transcripts in your knowledge management system  
-**Status**: Implementation complete - Core functionality ready, startup script available
+**Status**: ✅ Production Ready (v0.1) - All features implemented and tested
 
 ## Quick Start (< 5 minutes)
 
@@ -57,6 +57,12 @@ OBSIDIAN_VAULT_PATH=/path/to/your/vault
 
 # Normal operation (continuous polling)
 ./start_sync.sh
+
+# Check service status
+./manage_service.sh status
+
+# View logs
+tail -f logs/service.log
 ```
 
 **Expected output**: macOS notification showing "🎙️ New Fireflies meeting synced" and new .md files in your Obsidian Fireflies folder.
@@ -115,6 +121,7 @@ python -m src.main --test MEETING_ID_123
 ### Testing Strategy
 - **Unit tests**: Individual component testing (API client, formatters, etc.)
 - **Integration tests**: End-to-end sync workflow
+- **Test coverage**: All 8 core modules have corresponding test files
 - **Test command**: `pytest tests/` or `pytest tests/test_specific.py`
 
 ### Build Process
@@ -163,10 +170,10 @@ No build step required - Python application runs directly from source.
 - **Memory Efficient**: Process meetings individually, don't hold large datasets
 
 ### Known Limitations
-- macOS only (notifications)
-- No real-time webhooks (polling-based)
-- No two-way sync (Obsidian → Fireflies)
-- Won't update existing notes if meeting changes
+- macOS only (notifications) - core sync works on other platforms
+- No real-time webhooks (polling-based) - 15-second interval
+- No two-way sync (Obsidian → Fireflies) - read-only from Fireflies
+- Won't update existing notes if meeting changes - prevents accidental overwrites
 
 ## Team Knowledge
 
@@ -192,8 +199,14 @@ No build step required - Python application runs directly from source.
 - **Project Rules**: `adams-rules/` directory
 
 ### Troubleshooting
-- **API Rate Limits**: Check exponential backoff implementation
-- **Missing Meetings**: Verify date filter (June 13, 2024+)
-- **Notification Issues**: Ensure macOS permissions for notifications
-- **File Conflicts**: Check duplicate detection in state manager
+- **API Rate Limits**: Check exponential backoff implementation in logs
+- **Missing Meetings**: Verify date filter (June 13, 2024+) in config
+- **Notification Issues**: System Preferences → Notifications → Python → Allow
+- **File Conflicts**: Check `processed_meetings.json` in project root
 - **Configuration Errors**: Validate `config.yaml` format and required fields
+- **Service Issues**: Check `logs/service.log` and `logs/launch_agent.log`
+
+### Support
+- **Issues**: Report bugs or feature requests via GitHub Issues
+- **Documentation**: See `ai-notes/` for implementation details
+- **Development**: Follow workflow in `ai-dev-tasks/`
