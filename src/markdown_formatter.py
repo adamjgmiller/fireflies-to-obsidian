@@ -73,7 +73,7 @@ class MarkdownFormatter:
     
     def _generate_frontmatter(self, meeting_data: Dict) -> str:
         """
-        Generate YAML frontmatter with all meeting metadata.
+        Generate clean YAML frontmatter with essential meeting metadata for Obsidian.
         
         Args:
             meeting_data: Meeting data from Fireflies API
@@ -107,7 +107,7 @@ class MarkdownFormatter:
         
         organizer = meeting_data.get('organizer_email', '') or ''
         
-        # Extract attendees
+        # Extract attendees (just emails for frontmatter)
         attendees = []
         meeting_attendees = meeting_data.get('meeting_attendees', []) or []
         for attendee in meeting_attendees:
@@ -118,24 +118,23 @@ class MarkdownFormatter:
         if not attendees:
             attendees = meeting_data.get('participants', []) or []
         
-        # Extract summary data
+        # Extract summary data for minimal frontmatter
         summary = meeting_data.get('summary', {}) or {}
-        keywords = summary.get('keywords', []) or []
-        action_items = summary.get('action_items', []) or []
-        topics = summary.get('topics_discussed', []) or []
-        meeting_type = summary.get('meeting_type', '')
+        meeting_type = summary.get('meeting_type', '') or ''
         
-        # Build frontmatter with Obsidian-specific properties
+        # Build clean frontmatter with essential Obsidian properties only
         frontmatter_lines = [
             '---',
             f'title: "{title}"',
             f'meeting_id: "{meeting_id}"',
             f'date: "{formatted_date}"',
-            f'created: "{datetime.now().isoformat()}Z"',
             f'duration: {duration}',
             f'organizer: "{organizer}"',
-            f'meeting_type: "{meeting_type}"',
         ]
+        
+        # Add meeting type if it's meaningful
+        if meeting_type and meeting_type.lower() not in ['none', '', 'null']:
+            frontmatter_lines.append(f'meeting_type: "{meeting_type}"')
         
         # Add aliases for better Obsidian linking
         aliases = [title]
@@ -152,45 +151,13 @@ class MarkdownFormatter:
             for alias in aliases:
                 frontmatter_lines.append(f'  - "{alias}"')
         
-        # Add attendees list
+        # Add attendees list (simplified)
         if attendees:
             frontmatter_lines.append('attendees:')
-            for attendee in attendees:
+            for attendee in attendees[:10]:  # Limit to first 10 to avoid bloat
                 frontmatter_lines.append(f'  - "{attendee}"')
         
-        # Add keywords
-        if keywords:
-            frontmatter_lines.append('keywords:')
-            # Handle both string and list formats
-            if isinstance(keywords, str):
-                frontmatter_lines.append(f'  - "{keywords}"')
-            else:
-                for keyword in keywords:
-                    frontmatter_lines.append(f'  - "{keyword}"')
-        
-        # Add topics
-        if topics:
-            frontmatter_lines.append('topics:')
-            # Handle both string and list formats
-            if isinstance(topics, str):
-                frontmatter_lines.append(f'  - "{topics}"')
-            else:
-                for topic in topics:
-                    frontmatter_lines.append(f'  - "{topic}"')
-        
-        # Add action items
-        if action_items:
-            frontmatter_lines.append('action_items:')
-            # Handle both string and list formats
-            if isinstance(action_items, str):
-                # If it's a string, treat as single item
-                frontmatter_lines.append(f'  - "{action_items}"')
-            else:
-                # If it's a list, iterate through items
-                for item in action_items:
-                    frontmatter_lines.append(f'  - "{item}"')
-        
-        # Add URLs
+        # Add URLs for easy access
         transcript_url = meeting_data.get('transcript_url', '')
         meeting_link = meeting_data.get('meeting_link', '')
         if transcript_url:
@@ -198,11 +165,11 @@ class MarkdownFormatter:
         if meeting_link:
             frontmatter_lines.append(f'meeting_link: "{meeting_link}"')
         
-        # Add comprehensive tags for Obsidian
+        # Add essential tags for Obsidian organization
         tags = ['fireflies', 'meeting']
         
         # Add meeting type if available
-        if meeting_type and meeting_type.lower() != 'none':
+        if meeting_type and meeting_type.lower() not in ['none', '', 'null']:
             tags.append(meeting_type.lower().replace(' ', '-'))
         
         # Add year and month tags for temporal organization
@@ -216,14 +183,6 @@ class MarkdownFormatter:
                     ])
             except:
                 pass
-        
-        # Add keyword-based tags (first 3 keywords only)
-        if keywords:
-            keyword_list = keywords if isinstance(keywords, list) else [keywords]
-            for keyword in keyword_list[:3]:  # Limit to prevent tag bloat
-                clean_keyword = keyword.lower().replace(' ', '-').replace('_', '-')
-                if clean_keyword not in tags:
-                    tags.append(clean_keyword)
         
         # Add organizer domain as tag
         if organizer and '@' in organizer:
@@ -339,7 +298,7 @@ class MarkdownFormatter:
     
     def _generate_summary_section(self, meeting_data: Dict) -> str:
         """
-        Generate meeting summary section.
+        Generate meeting summary section with improved structure.
         
         Args:
             meeting_data: Meeting data from Fireflies API
@@ -354,60 +313,92 @@ class MarkdownFormatter:
             ''
         ]
         
+        has_content = False
+        
         # Add overview
         overview = summary.get('overview') or summary.get('short_overview', '')
-        if overview:
+        if overview and overview.strip():
             summary_lines.extend([
                 '### Overview',
                 overview,
                 ''
             ])
+            has_content = True
         
         # Add key points
         bullet_gist = summary.get('shorthand_bullet', '')
-        if bullet_gist:
+        if bullet_gist and bullet_gist.strip():
             summary_lines.extend([
                 '### Key Points',
                 bullet_gist,
                 ''
             ])
+            has_content = True
         
-        # Add action items
+        # Add action items (only if they exist)
         action_items = summary.get('action_items', [])
         if action_items:
-            summary_lines.extend([
-                '### Action Items',
-                ''
-            ])
             # Handle both string and list formats
-            if isinstance(action_items, str):
+            parsed_items = []
+            if isinstance(action_items, str) and action_items.strip():
                 # Parse the formatted action items string
                 parsed_items = self._parse_action_items_string(action_items)
+            elif isinstance(action_items, list):
+                # If it's a list, use items directly
+                parsed_items = [item for item in action_items if item and str(item).strip()]
+            
+            if parsed_items:
+                summary_lines.extend([
+                    '### Action Items',
+                    ''
+                ])
                 for item in parsed_items:
                     summary_lines.append(f'- [ ] {item}')
-            else:
-                # If it's a list, iterate through items
-                for item in action_items:
-                    summary_lines.append(f'- [ ] {item}')
-            summary_lines.append('')
+                summary_lines.append('')
+                has_content = True
         
-        # Add topics discussed
+        # Add topics discussed (only if they exist)
         topics = summary.get('topics_discussed', [])
         if topics:
-            summary_lines.extend([
-                '### Topics Discussed',
-                ''
-            ])
-            for topic in topics:
-                summary_lines.append(f'- {topic}')
-            summary_lines.append('')
+            # Handle both string and list formats
+            topic_list = []
+            if isinstance(topics, str) and topics.strip():
+                topic_list = [topics]
+            elif isinstance(topics, list):
+                topic_list = [topic for topic in topics if topic and str(topic).strip()]
+            
+            if topic_list:
+                summary_lines.extend([
+                    '### Topics Discussed',
+                    ''
+                ])
+                for topic in topic_list:
+                    summary_lines.append(f'- {topic}')
+                summary_lines.append('')
+                has_content = True
         
-        # Add keywords
+        # Add keywords (only if they exist and are meaningful)
         keywords = summary.get('keywords', [])
         if keywords:
+            # Handle both string and list formats
+            keyword_list = []
+            if isinstance(keywords, str) and keywords.strip():
+                keyword_list = [keywords]
+            elif isinstance(keywords, list):
+                keyword_list = [kw for kw in keywords if kw and str(kw).strip()]
+            
+            if keyword_list:
+                summary_lines.extend([
+                    '### Keywords',
+                    ', '.join(keyword_list),
+                    ''
+                ])
+                has_content = True
+        
+        # If no content was added, show a simple message
+        if not has_content:
             summary_lines.extend([
-                '### Keywords',
-                ', '.join(keywords),
+                '*No summary information available*',
                 ''
             ])
         
