@@ -66,6 +66,11 @@ class FirefliesClient:
           name
           location
         }
+        meeting_info {
+          fred_joined
+          silent_meeting
+          summary_status
+        }
         speakers {
           id
           name
@@ -259,13 +264,25 @@ class FirefliesClient:
     
     async def get_transcript_details(self, transcript_id: str) -> Dict:
         """
-        Get complete transcript details including content, speakers, and summary.
+        Get complete transcript details including content, speakers, summary, and meeting info.
         
         Args:
             transcript_id: Fireflies transcript ID
             
         Returns:
-            Dict: Complete transcript data
+            Dict: Complete transcript data including:
+                - Basic meeting metadata (id, title, date, duration, etc.)
+                - meeting_info: Contains fred_joined, silent_meeting, and summary_status fields
+                - speakers: List of speakers in the meeting
+                - sentences: Full transcript sentences with timing
+                - summary: AI-generated meeting summary with action items, keywords, etc.
+                - Additional metadata (URLs, calendar info, etc.)
+                
+            The meeting_info.summary_status field indicates summary processing state:
+            - 'processing': Summary is still being generated
+            - 'processed': Summary is ready and complete
+            - 'failed': Summary generation failed
+            - 'skipped': Summary was skipped for this meeting
             
         Raises:
             FirefliesAPIError: For API-specific errors
@@ -506,3 +523,84 @@ class FirefliesClient:
             if e.error_code == 'object_not_found':
                 return None
             raise
+
+    def is_summary_ready(self, meeting_data: Dict) -> bool:
+        """
+        Check if a meeting's summary is ready for processing.
+        
+        Args:
+            meeting_data: Meeting data dictionary from Fireflies API
+            
+        Returns:
+            bool: True if summary is ready (status == 'processed'), False otherwise
+        """
+        try:
+            # Handle None or invalid input
+            if not meeting_data or not isinstance(meeting_data, dict):
+                logger.warning("Invalid meeting data provided for summary readiness check")
+                return False
+            
+            # Navigate to the summary_status field
+            meeting_info = meeting_data.get('meeting_info', {})
+            if not isinstance(meeting_info, dict):
+                logger.warning(f"Meeting {meeting_data.get('id', 'unknown')} has invalid meeting_info structure")
+                return False
+                
+            summary_status = meeting_info.get('summary_status')
+            
+            if summary_status is None:
+                logger.warning(f"Meeting {meeting_data.get('id', 'unknown')} missing summary_status field")
+                return False
+            
+            is_ready = summary_status == 'processed'
+            
+            if not is_ready:
+                logger.info(f"Meeting {meeting_data.get('id', 'unknown')} summary not ready - status: {summary_status}")
+            
+            return is_ready
+            
+        except (KeyError, AttributeError, TypeError) as e:
+            meeting_id = 'unknown'
+            try:
+                if meeting_data and isinstance(meeting_data, dict):
+                    meeting_id = meeting_data.get('id', 'unknown')
+            except:
+                pass
+            logger.warning(f"Error checking summary readiness for meeting {meeting_id}: {e}")
+            return False
+
+    def get_meeting_with_summary_check(self, meeting_id: str) -> Optional[Dict]:
+        """
+        Get meeting data only if the summary is ready for processing.
+        
+        Args:
+            meeting_id: ID of the meeting to retrieve
+            
+        Returns:
+            Optional[Dict]: Meeting data if summary is ready, None otherwise
+        """
+        try:
+            # Get the meeting data
+            meeting_data = self.get_meeting(meeting_id)
+            
+            if meeting_data is None:
+                logger.warning(f"Meeting {meeting_id} not found")
+                return None
+            
+            # Check if summary is ready
+            if not self.is_summary_ready(meeting_data):
+                # Get current status for logging
+                meeting_info = meeting_data.get('meeting_info', {})
+                current_status = meeting_info.get('summary_status', 'unknown')
+                logger.info(f"Skipping meeting {meeting_id} - summary not ready (current status: {current_status})")
+                return None
+            
+            logger.debug(f"Meeting {meeting_id} summary is ready for processing")
+            return meeting_data
+            
+        except FirefliesAPIError as e:
+            logger.error(f"Error retrieving meeting {meeting_id} with summary check: {e}")
+            return None
+        except Exception as e:
+            logger.error(f"Unexpected error checking meeting {meeting_id} summary readiness: {e}")
+            return None

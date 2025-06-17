@@ -80,6 +80,11 @@ def mock_transcript_details_response():
                         "location": "New York"
                     }
                 ],
+                "meeting_info": {
+                    "fred_joined": True,
+                    "silent_meeting": False,
+                    "summary_status": "processed"
+                },
                 "speakers": [
                     {"id": "speaker_1", "name": "John Doe"},
                     {"id": "speaker_2", "name": "Jane Smith"}
@@ -443,4 +448,170 @@ class TestFirefliesAPIError:
         
         assert str(error) == "Test error"
         assert error.error_code == "test_error"
-        assert error.response_data == response_data 
+        assert error.response_data == response_data
+
+
+class TestFirefliesClientSummaryReadiness:
+    """Test FirefliesClient summary readiness functionality."""
+    
+    @pytest.fixture
+    def mock_meeting_data_ready(self):
+        """Mock meeting data with processed summary status."""
+        return {
+            "id": "meeting_ready_123",
+            "title": "Ready Meeting",
+            "meeting_info": {
+                "fred_joined": True,
+                "silent_meeting": False,
+                "summary_status": "processed"
+            }
+        }
+    
+    @pytest.fixture
+    def mock_meeting_data_processing(self):
+        """Mock meeting data with processing summary status."""
+        return {
+            "id": "meeting_processing_456",
+            "title": "Processing Meeting",
+            "meeting_info": {
+                "fred_joined": True,
+                "silent_meeting": False,
+                "summary_status": "processing"
+            }
+        }
+    
+    @pytest.fixture
+    def mock_meeting_data_failed(self):
+        """Mock meeting data with failed summary status."""
+        return {
+            "id": "meeting_failed_789",
+            "title": "Failed Meeting",
+            "meeting_info": {
+                "fred_joined": True,
+                "silent_meeting": False,
+                "summary_status": "failed"
+            }
+        }
+    
+    @pytest.fixture
+    def mock_meeting_data_skipped(self):
+        """Mock meeting data with skipped summary status."""
+        return {
+            "id": "meeting_skipped_101",
+            "title": "Skipped Meeting",
+            "meeting_info": {
+                "fred_joined": True,
+                "silent_meeting": False,
+                "summary_status": "skipped"
+            }
+        }
+    
+    @pytest.fixture
+    def mock_meeting_data_missing_meeting_info(self):
+        """Mock meeting data without meeting_info field."""
+        return {
+            "id": "meeting_no_info_202",
+            "title": "Meeting Without Info"
+        }
+    
+    @pytest.fixture
+    def mock_meeting_data_missing_summary_status(self):
+        """Mock meeting data with meeting_info but no summary_status field."""
+        return {
+            "id": "meeting_no_status_303",
+            "title": "Meeting Without Status",
+            "meeting_info": {
+                "fred_joined": True,
+                "silent_meeting": False
+            }
+        }
+    
+    def test_is_summary_ready_processed(self, client, mock_meeting_data_ready):
+        """Test is_summary_ready returns True for processed status."""
+        result = client.is_summary_ready(mock_meeting_data_ready)
+        assert result is True
+    
+    def test_is_summary_ready_processing(self, client, mock_meeting_data_processing):
+        """Test is_summary_ready returns False for processing status."""
+        result = client.is_summary_ready(mock_meeting_data_processing)
+        assert result is False
+    
+    def test_is_summary_ready_failed(self, client, mock_meeting_data_failed):
+        """Test is_summary_ready returns False for failed status."""
+        result = client.is_summary_ready(mock_meeting_data_failed)
+        assert result is False
+    
+    def test_is_summary_ready_skipped(self, client, mock_meeting_data_skipped):
+        """Test is_summary_ready returns False for skipped status."""
+        result = client.is_summary_ready(mock_meeting_data_skipped)
+        assert result is False
+    
+    def test_is_summary_ready_missing_meeting_info(self, client, mock_meeting_data_missing_meeting_info):
+        """Test is_summary_ready returns False when meeting_info field is missing."""
+        result = client.is_summary_ready(mock_meeting_data_missing_meeting_info)
+        assert result is False
+    
+    def test_is_summary_ready_missing_summary_status(self, client, mock_meeting_data_missing_summary_status):
+        """Test is_summary_ready returns False when summary_status field is missing."""
+        result = client.is_summary_ready(mock_meeting_data_missing_summary_status)
+        assert result is False
+    
+    def test_is_summary_ready_invalid_data_structure(self, client):
+        """Test is_summary_ready handles invalid data structures gracefully."""
+        # Test with None
+        assert client.is_summary_ready(None) is False
+        
+        # Test with empty dict
+        assert client.is_summary_ready({}) is False
+        
+        # Test with string instead of dict
+        assert client.is_summary_ready("invalid") is False
+        
+        # Test with meeting_info as string instead of dict
+        invalid_data = {
+            "id": "invalid_123",
+            "meeting_info": "not_a_dict"
+        }
+        assert client.is_summary_ready(invalid_data) is False
+    
+    def test_get_meeting_with_summary_check_ready_meeting(self, client, mock_meeting_data_ready):
+        """Test get_meeting_with_summary_check returns meeting when summary is ready."""
+        with patch.object(client, 'get_meeting', return_value=mock_meeting_data_ready):
+            result = client.get_meeting_with_summary_check("meeting_ready_123")
+            assert result == mock_meeting_data_ready
+    
+    def test_get_meeting_with_summary_check_not_ready_meeting(self, client, mock_meeting_data_processing):
+        """Test get_meeting_with_summary_check returns None when summary is not ready."""
+        with patch.object(client, 'get_meeting', return_value=mock_meeting_data_processing):
+            result = client.get_meeting_with_summary_check("meeting_processing_456")
+            assert result is None
+    
+    def test_get_meeting_with_summary_check_meeting_not_found(self, client):
+        """Test get_meeting_with_summary_check returns None when meeting doesn't exist."""
+        with patch.object(client, 'get_meeting', return_value=None):
+            result = client.get_meeting_with_summary_check("nonexistent_meeting")
+            assert result is None
+    
+    def test_get_meeting_with_summary_check_api_error(self, client):
+        """Test get_meeting_with_summary_check handles API errors gracefully."""
+        with patch.object(client, 'get_meeting', side_effect=FirefliesAPIError("API Error")):
+            result = client.get_meeting_with_summary_check("error_meeting")
+            assert result is None
+    
+    def test_get_meeting_with_summary_check_unexpected_error(self, client):
+        """Test get_meeting_with_summary_check handles unexpected errors gracefully."""
+        with patch.object(client, 'get_meeting', side_effect=Exception("Unexpected error")):
+            result = client.get_meeting_with_summary_check("error_meeting")
+            assert result is None
+    
+    def test_get_meeting_with_summary_check_missing_meeting_info(self, client, mock_meeting_data_missing_meeting_info):
+        """Test get_meeting_with_summary_check returns None for meeting with missing meeting_info."""
+        with patch.object(client, 'get_meeting', return_value=mock_meeting_data_missing_meeting_info):
+            result = client.get_meeting_with_summary_check("meeting_no_info_202")
+            assert result is None
+    
+    def test_get_meeting_with_summary_check_missing_summary_status(self, client, mock_meeting_data_missing_summary_status):
+        """Test get_meeting_with_summary_check returns None for meeting with missing summary_status."""
+        with patch.object(client, 'get_meeting', return_value=mock_meeting_data_missing_summary_status):
+            result = client.get_meeting_with_summary_check("meeting_no_status_303")
+            assert result is None 

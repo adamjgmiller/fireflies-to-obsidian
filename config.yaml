@@ -20,9 +20,9 @@ obsidian:
 
 # Sync Settings
 sync:
-  polling_interval_seconds: 15
+  polling_interval_seconds: 60
   batch_size: 10
-  lookback_days: 7  # How many days back to check for new meetings
+  lookback_days: 21  # How many days back to check for new meetings
 
 # Markdown Template Settings
 markdown:

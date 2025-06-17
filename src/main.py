@@ -28,6 +28,7 @@ def signal_handler(signum, frame):
 def process_meetings(fireflies_client: FirefliesClient, 
                     obsidian_sync: ObsidianSync,
                     state_manager: StateManager,
+                    config,
                     meeting_ids: Optional[List[str]] = None,
                     enable_notifications: bool = True) -> int:
     """
@@ -37,13 +38,16 @@ def process_meetings(fireflies_client: FirefliesClient,
         fireflies_client: Fireflies API client
         obsidian_sync: Obsidian sync handler
         state_manager: State manager for tracking processed meetings
+        config: Application configuration object
         meeting_ids: Optional list of specific meeting IDs to process (test mode)
+        enable_notifications: Whether to send notifications
     
     Returns:
         Number of meetings processed
     """
     processed_count = 0
     error_count = 0
+    skipped_count = 0  # Track meetings skipped due to summary not ready
     notification_service = get_notification_service(enable_notifications)
     
     try:
@@ -53,31 +57,51 @@ def process_meetings(fireflies_client: FirefliesClient,
             meetings = []
             for meeting_id in meeting_ids:
                 try:
-                    meeting = fireflies_client.get_meeting(meeting_id)
+                    # Use summary check method to only get meetings with ready summaries
+                    meeting = fireflies_client.get_meeting_with_summary_check(meeting_id)
                     if meeting:
                         meetings.append(meeting)
+                    else:
+                        # Meeting exists but summary not ready, or meeting doesn't exist
+                        # Log will be handled by get_meeting_with_summary_check method
+                        skipped_count += 1
                 except Exception as e:
                     logger.error(f"Failed to fetch meeting {meeting_id}: {e}")
+                    error_count += 1
         else:
             # Normal mode: get recent meetings
-            # Get meetings from the last 7 days by default
-            since_date = datetime.now() - timedelta(days=7)
+            # Use configured lookback days
+            lookback_days = config.sync.lookback_days
+            since_date = datetime.now() - timedelta(days=lookback_days)
+            logger.info(f"Looking for meetings from the last {lookback_days} days")
             meetings_list = fireflies_client.get_recent_meetings(since_date)
             
-            # Fetch full details for each meeting
-            logger.info(f"Found {len(meetings_list)} meetings, fetching full details...")
+            # Filter out already processed meetings first, then fetch full details
+            logger.info(f"Found {len(meetings_list)} meetings, filtering already processed and checking summary readiness...")
             meetings = []
             for meeting_summary in meetings_list:
                 try:
                     meeting_id = meeting_summary.get('id')
                     if meeting_id:
-                        full_meeting = fireflies_client.get_meeting(meeting_id)
+                        # Skip if already processed - avoid unnecessary API calls
+                        if state_manager.is_processed(meeting_id):
+                            logger.debug(f"Meeting {meeting_id} already processed, skipping API fetch")
+                            continue
+                        
+                        # Use summary check method to only get meetings with ready summaries
+                        full_meeting = fireflies_client.get_meeting_with_summary_check(meeting_id)
                         if full_meeting:
                             meetings.append(full_meeting)
+                        else:
+                            # Meeting summary not ready - skip but don't count as error
+                            skipped_count += 1
                 except Exception as e:
                     logger.error(f"Failed to fetch full details for meeting {meeting_id}: {e}")
+                    error_count += 1
         
-        logger.info(f"Found {len(meetings)} meetings to process")
+        logger.info(f"Found {len(meetings)} meetings with ready summaries to process")
+        if skipped_count > 0:
+            logger.info(f"Skipped {skipped_count} meetings with summaries not yet ready")
         
         for meeting in meetings:
             meeting_id = meeting.get('id')
@@ -85,10 +109,7 @@ def process_meetings(fireflies_client: FirefliesClient,
                 logger.warning("Meeting without ID found, skipping")
                 continue
             
-            # Skip if already processed
-            if state_manager.is_processed(meeting_id):
-                logger.debug(f"Meeting {meeting_id} already processed, skipping")
-                continue
+            # Note: Already filtered processed meetings during fetch phase for efficiency
             
             try:
                 # Create Obsidian note
@@ -96,7 +117,7 @@ def process_meetings(fireflies_client: FirefliesClient,
                 if file_path:
                     state_manager.mark_processed(meeting_id)
                     processed_count += 1
-                    logger.info(f"Successfully processed meeting {meeting_id}")
+                    logger.info(f"Successfully processed meeting {meeting_id} with ready summary")
                     
                     # Send notification for this meeting
                     notification_service.notify_meeting_synced(meeting)
@@ -105,7 +126,11 @@ def process_meetings(fireflies_client: FirefliesClient,
                 logger.error(f"Failed to process meeting {meeting_id}: {e}")
                 error_count += 1
         
-        logger.info(f"Processed {processed_count} new meetings")
+        # Enhanced logging for summary readiness tracking
+        if skipped_count > 0:
+            logger.info(f"Summary: {processed_count} meetings processed, {skipped_count} skipped (summaries not ready), {error_count} errors")
+        else:
+            logger.info(f"Processed {processed_count} new meetings")
         
         # Send summary notification if any meetings were processed or failed
         if processed_count > 0 or error_count > 0:
@@ -136,12 +161,13 @@ def run_polling_loop(config, test_meeting_ids: Optional[List[str]] = None):
     stats = state_manager.get_stats()
     logger.info("Starting Fireflies to Obsidian sync service")
     logger.info(f"Obsidian vault: {config.obsidian.vault_path}")
+    logger.info(f"Lookback days: {config.sync.lookback_days}")
     logger.info(f"State file: {stats['state_file']}")
     logger.info(f"Previously processed meetings: {stats['total_processed']}")
     
     if test_meeting_ids:
         logger.info("Running in test mode with specific meeting IDs")
-        process_meetings(fireflies_client, obsidian_sync, state_manager, test_meeting_ids)
+        process_meetings(fireflies_client, obsidian_sync, state_manager, config, test_meeting_ids)
         logger.info("Test mode completed")
         return
     
@@ -152,7 +178,7 @@ def run_polling_loop(config, test_meeting_ids: Optional[List[str]] = None):
     while not shutdown_requested:
         try:
             # Process meetings
-            processed = process_meetings(fireflies_client, obsidian_sync, state_manager, 
+            processed = process_meetings(fireflies_client, obsidian_sync, state_manager, config,
                                        enable_notifications=config.notifications.enabled)
             
             # Update last check time

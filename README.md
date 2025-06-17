@@ -155,6 +155,7 @@ No build step required - Python application runs directly from source.
 ### Business Logic
 - **Meeting Filtering**: Only sync meetings after June 13, 2024 (configurable)
 - **Duplicate Prevention**: Track processed meetings in JSON state file
+- **Summary Readiness Checking**: Automatically wait for meeting summaries to be fully processed before syncing to Obsidian
 - **File Naming**: `YYYY-MM-DD-HH-MM-[Meeting Title].md` for chronological sorting
 - **Speaker Grouping**: Consecutive statements by same speaker under single header
 
@@ -174,6 +175,28 @@ No build step required - Python application runs directly from source.
 - No real-time webhooks (polling-based) - 15-second interval
 - No two-way sync (Obsidian → Fireflies) - read-only from Fireflies
 - Won't update existing notes if meeting changes - prevents accidental overwrites
+
+### Summary Readiness Feature
+
+The sync tool automatically checks if Fireflies has finished processing meeting summaries before syncing to Obsidian. This ensures you always get complete meeting notes with full AI-generated summaries.
+
+**How it works:**
+- Before syncing each meeting, the tool checks the `summary_status` field from the Fireflies API
+- Only meetings with `summary_status: 'processed'` are synced to Obsidian
+- Meetings with incomplete summaries (`'processing'`, `'failed'`, or `'skipped'`) are temporarily skipped
+- Skipped meetings are automatically retried in the next polling cycle (15 seconds later)
+- No meetings are permanently lost - they remain in the queue until summaries are ready
+
+**Benefits:**
+- **Complete Data**: Always get fully processed transcripts with AI summaries, action items, and keywords
+- **No Partial Syncs**: Eliminates incomplete notes that would need manual updates later
+- **Automatic Retry**: Hands-off operation - the tool handles timing automatically
+- **Intelligent Waiting**: Only waits when necessary, immediately syncs meetings with ready summaries
+
+**Status Logging:**
+- Logs show when meetings are skipped: `"Skipping meeting [ID] - summary not ready (current status: processing)"`
+- Summary reports include skipped count: `"Summary: 3 meetings processed, 2 skipped (summaries not ready), 0 errors"`
+- No action required from user - skipped meetings will be processed automatically once ready
 
 ## Team Knowledge
 

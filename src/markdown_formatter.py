@@ -422,7 +422,8 @@ class MarkdownFormatter:
         # Get unique speakers for summary
         speakers = set()
         for sentence in sentences:
-            speakers.add(sentence.get('speaker_name', 'Unknown Speaker'))
+            speaker_name = sentence.get('speaker_name') or 'Unknown Speaker'
+            speakers.add(speaker_name)
         
         transcript_lines = [
             '## Transcript',
@@ -441,7 +442,7 @@ class MarkdownFormatter:
         current_start_time = None
         
         for sentence in sentences:
-            speaker_name = sentence.get('speaker_name', 'Unknown Speaker')
+            speaker_name = sentence.get('speaker_name') or 'Unknown Speaker'
             text = sentence.get('text', '')
             start_time = sentence.get('start_time', 0)
             
