@@ -44,12 +44,6 @@ class ObsidianSync:
             filename = self.generate_filename(meeting_data)
             file_path = self.fireflies_folder / filename
             
-            # Check for duplicates
-            if self.check_duplicate(filename):
-                logger.warning(f"Meeting file already exists: {filename}")
-                # Return the existing file path so it can be marked as processed
-                return file_path
-            
             # Write content to file
             file_path.write_text(content, encoding='utf-8')
             logger.info(f"Meeting saved successfully: {filename}")

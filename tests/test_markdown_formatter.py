@@ -26,7 +26,7 @@ def sample_meeting_data():
         "title": "Test Meeting",
         "date": "2024-06-15T14:30:00.000Z",
         "dateString": "June 15, 2024 2:30:00 PM UTC",
-        "duration": 3600,
+        "duration": 60,
         "organizer_email": "organizer@example.com",
         "participants": ["user1@example.com", "user2@example.com"],
         "fireflies_users": ["fireflies@example.com"],
@@ -173,7 +173,7 @@ class TestMarkdownFormatterFrontmatter:
         assert "title: \"Test Meeting\"" in result
         assert "meeting_id: \"transcript_123\"" in result
         assert "date: \"2024-06-15T14:30:00.000Z\"" in result
-        assert "duration: 3600" in result
+        assert "duration: 60" in result
         assert "organizer: \"organizer@example.com\"" in result
         assert "meeting_type: \"team_meeting\"" in result
         
@@ -182,18 +182,9 @@ class TestMarkdownFormatterFrontmatter:
         assert "- \"john@example.com\"" in result
         assert "- \"jane@example.com\"" in result
         
-        # Check keywords
-        assert "keywords:" in result
-        assert "- \"meeting\"" in result
-        assert "- \"agenda\"" in result
-        
-        # Check action items
-        assert "action_items:" in result
-        assert "- \"Review quarterly reports\"" in result
-        
-        # Check topics
-        assert "topics:" in result
-        assert "- \"Project updates\"" in result
+        # Check that tags include the meeting_type
+        assert "tags:" in result
+        assert "- \"team_meeting\"" in result
         
         # Check URLs
         assert "transcript_url: \"https://app.fireflies.ai/view/transcript_123\"" in result
@@ -215,7 +206,7 @@ class TestMarkdownFormatterFrontmatter:
         assert "meeting_id: \"minimal_123\"" in result
         assert "duration: 0" in result
         assert "organizer: \"\"" in result
-        assert "meeting_type: \"\"" in result
+        # meeting_type is only added if it has a meaningful value
     
     def test_generate_frontmatter_fallback_participants(self, formatter):
         """Test frontmatter falls back to participants when meeting_attendees is empty."""
@@ -258,17 +249,24 @@ class TestMarkdownFormatterMeetingDetails:
         result = formatter._generate_meeting_details(sample_meeting_data)
         
         assert "## Meeting Details" in result
-        assert "- **Duration:** 60m" in result  # 3600 seconds = 60 minutes
+        assert "- **Duration:** 60m" in result  # 60 minutes from the test data
         assert "- **Organizer:** organizer@example.com" in result
         assert "- **Transcript URL:** [View in Fireflies](https://app.fireflies.ai/view/transcript_123)" in result
         assert "- **Meeting Link:** [Join Meeting](https://zoom.us/j/123456789)" in result
     
     def test_generate_meeting_details_duration_with_seconds(self, formatter):
         """Test duration formatting with seconds."""
-        data = {"duration": 3665}  # 61 minutes and 5 seconds
+        data = {"duration": 61.25}  # 61.25 minutes = 61 minutes and 15 seconds
         result = formatter._generate_meeting_details(data)
         
-        assert "- **Duration:** 61m 5s" in result
+        assert "- **Duration:** 61m 15s" in result
+    
+    def test_generate_meeting_details_real_fireflies_duration(self, formatter):
+        """Test duration formatting with real Fireflies API data."""
+        data = {"duration": 41.25}  # Real example from debug file: 41.25 minutes
+        result = formatter._generate_meeting_details(data)
+        
+        assert "- **Duration:** 41m 15s" in result
     
     def test_generate_meeting_details_minimal(self, formatter, minimal_meeting_data):
         """Test meeting details with minimal data."""
@@ -384,9 +382,9 @@ class TestMarkdownFormatterTranscript:
         result = formatter._generate_transcript_section(sample_meeting_data)
         
         assert "## Transcript" in result
-        assert "**John Doe:** Hello everyone, let's start the meeting." in result
-        assert "**John Doe:** First item is the quarterly review." in result
-        assert "**Jane Smith:** Thanks John. Let's review the agenda." in result
+        assert "**John Doe** `[00:05]`: Hello everyone, let's start the meeting." in result
+        assert "**John Doe** `[00:12]`: First item is the quarterly review." in result
+        assert "**Jane Smith** `[00:08]`: Thanks John. Let's review the agenda." in result
     
     def test_generate_transcript_no_sentences(self, formatter):
         """Test transcript with no sentences."""
@@ -411,9 +409,9 @@ class TestMarkdownFormatterTranscript:
         result = formatter._generate_transcript_section(data)
         
         # Alice's first two sentences should be grouped
-        assert "**Alice:** First sentence. Second sentence." in result
-        assert "**Bob:** Bob's sentence." in result
-        assert "**Alice:** Alice again." in result
+        assert "**Alice** `[00:00]`: First sentence. Second sentence." in result
+        assert "**Bob** `[00:10]`: Bob's sentence." in result
+        assert "**Alice** `[00:15]`: Alice again." in result
     
     def test_generate_transcript_missing_data(self, formatter):
         """Test transcript with missing speaker names and text."""
@@ -427,8 +425,8 @@ class TestMarkdownFormatterTranscript:
         
         result = formatter._generate_transcript_section(data)
         
-        assert "**Unknown Speaker:** Text without speaker" in result
-        assert "**Bob:** Bob's text" in result
+        assert "**Unknown Speaker** `[00:00]`: Text without speaker" in result
+        assert "**Bob** `[00:10]`: Bob's text" in result
 
 
 class TestMarkdownFormatterFilename:

@@ -233,10 +233,10 @@ class MarkdownFormatter:
         transcript_url = meeting_data.get('transcript_url', '')
         meeting_link = meeting_data.get('meeting_link', '')
         
-        # Convert duration to readable format
-        duration_mins = int(duration // 60)
-        duration_secs = int(duration % 60)
-        duration_str = f"{duration_mins}m {duration_secs}s" if duration_secs else f"{duration_mins}m"
+        # Convert duration to readable format (duration is in minutes from Fireflies)
+        total_minutes = int(duration)
+        remaining_seconds = int((duration - total_minutes) * 60)
+        duration_str = f"{total_minutes}m {remaining_seconds}s" if remaining_seconds else f"{total_minutes}m"
         
         details_lines = [
             '## Meeting Details',

@@ -65,6 +65,24 @@ OBSIDIAN_VAULT_PATH=/path/to/your/vault
 tail -f logs/service.log
 ```
 
+## Background Service Management
+
+The app runs as a macOS LaunchAgent background service that starts automatically on login. Use these commands to manage the service:
+
+```bash
+# Restart the background service (recommended method)
+./restart_service.sh
+
+# Check if background service is running
+launchctl list | grep fireflies
+
+# View background service logs
+tail -f logs/launch_agent.out.log  # Service startup/status logs
+tail -f logs/launch_agent.err.log  # Application errors/API rate limits
+```
+
+**Important**: The LaunchAgent service runs independently of terminal sessions. Running `./start_sync.sh` directly will create a separate process that may conflict with the background service.
+
 **Expected output**: macOS notification showing "🎙️ New Fireflies meeting synced" and new .md files in your Obsidian Fireflies folder.
 
 ## Architecture Overview
@@ -227,7 +245,8 @@ The sync tool automatically checks if Fireflies has finished processing meeting 
 - **Notification Issues**: System Preferences → Notifications → Python → Allow
 - **File Conflicts**: Check `processed_meetings.json` in project root
 - **Configuration Errors**: Validate `config.yaml` format and required fields
-- **Service Issues**: Check `logs/service.log` and `logs/launch_agent.log`
+- **Service Issues**: Check `logs/launch_agent.out.log` and `logs/launch_agent.err.log`
+- **Service Won't Start**: LaunchAgent uses `--launch-agent` flag to bypass conflict warnings
 
 ### Support
 - **Issues**: Report bugs or feature requests via GitHub Issues

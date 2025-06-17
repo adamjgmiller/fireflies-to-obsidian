@@ -57,6 +57,11 @@ def process_meetings(fireflies_client: FirefliesClient,
             meetings = []
             for meeting_id in meeting_ids:
                 try:
+                    # Skip if already processed - avoid unnecessary API calls (same as normal mode)
+                    if state_manager.is_processed(meeting_id):
+                        logger.debug(f"Test meeting {meeting_id} already processed, skipping API fetch")
+                        continue
+                    
                     # Use summary check method to only get meetings with ready summaries
                     meeting = fireflies_client.get_meeting_with_summary_check(meeting_id)
                     if meeting:
