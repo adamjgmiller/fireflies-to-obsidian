@@ -4,6 +4,15 @@
 **Core value**: Eliminates manual copying of meeting notes, providing immediate access to transcripts in your knowledge management system  
 **Status**: ✅ Production Ready (v0.1) - All features implemented and tested
 
+## Key Features
+
+- **Automatic File Versioning**: When re-processing meetings, creates versioned files (e.g., `Meeting (1).md`) instead of overwriting
+- **Smart Summary Detection**: Only processes meetings when AI summaries are ready
+- **State Persistence**: Tracks processed meetings to avoid duplicates
+- **Rich Markdown Formatting**: Creates well-structured notes with frontmatter, summaries, and transcripts
+- **macOS Notifications**: Real-time sync status updates
+- **Flexible Configuration**: YAML config with environment variable overrides
+
 ## Quick Start (< 5 minutes)
 
 ### Prerequisites
@@ -84,6 +93,36 @@ tail -f logs/launch_agent.err.log  # Application errors/API rate limits
 **Important**: The LaunchAgent service runs independently of terminal sessions. Running `./start_sync.sh` directly will create a separate process that may conflict with the background service.
 
 **Expected output**: macOS notification showing "🎙️ New Fireflies meeting synced" and new .md files in your Obsidian Fireflies folder.
+
+## Manual Sync Trigger
+
+While the service runs automatically every 5 minutes, you can trigger an immediate sync at any time:
+
+```bash
+# Trigger sync now (service must be running)
+./manage_service.sh sync-now
+
+# Or use the direct script
+./sync_now.sh
+```
+
+The manual sync:
+- Sends a signal (SIGUSR1) to the running service
+- Triggers immediate processing without waiting for the next poll
+- Shows sync progress in the logs
+- Works only on macOS/Unix systems
+
+### Checking Sync Status
+
+Before triggering manual sync, verify the service is running:
+
+```bash
+# Check service status
+./manage_service.sh status
+
+# Watch sync progress live
+./manage_service.sh logs
+```
 
 ## Architecture Overview
 
@@ -193,6 +232,33 @@ No build step required - Python application runs directly from source.
 - No real-time webhooks (polling-based) - 15-second interval
 - No two-way sync (Obsidian → Fireflies) - read-only from Fireflies
 - Won't update existing notes if meeting changes - prevents accidental overwrites
+
+### Troubleshooting Manual Sync
+
+If manual sync isn't working:
+
+1. **Service Not Running**
+   ```bash
+   # Check if service is running
+   ./manage_service.sh status
+   
+   # Start the service if needed
+   ./manage_service.sh start
+   ```
+
+2. **Signal Not Supported**
+   - Manual sync uses Unix signals (SIGUSR1)
+   - Only works on macOS, Linux, and Unix systems
+   - Windows users must wait for automatic polling
+
+3. **Sync Already in Progress**
+   - The service coalesces multiple sync requests
+   - If a sync is running, the signal will be processed after completion
+   - Check logs to see current sync status: `./manage_service.sh logs`
+
+4. **Permission Issues**
+   - Ensure sync_now.sh is executable: `chmod +x sync_now.sh`
+   - You must own the running process to send it signals
 
 ### Summary Readiness Feature
 

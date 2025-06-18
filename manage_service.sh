@@ -69,10 +69,26 @@ result = notif.send_notification(
 print(f'✅ Test notification sent: {result}')
 "
         ;;
+    sync-now)
+        echo "Triggering manual sync..."
+        # First check if service is running
+        if ! launchctl list | grep -q "$PLIST_NAME"; then
+            echo "❌ Service is not running! Start it first with: $0 start"
+            exit 1
+        fi
+        
+        # Call the sync_now.sh script
+        if [ -f "$PROJECT_DIR/sync_now.sh" ]; then
+            "$PROJECT_DIR/sync_now.sh"
+        else
+            echo "❌ sync_now.sh script not found!"
+            exit 1
+        fi
+        ;;
     *)
         echo "Fireflies to Obsidian Sync Service Manager"
         echo ""
-        echo "Usage: $0 {start|stop|restart|status|logs|install|uninstall|test-notification}"
+        echo "Usage: $0 {start|stop|restart|status|logs|sync-now|install|uninstall|test-notification}"
         echo ""
         echo "Commands:"
         echo "  start              Start the sync service"
@@ -80,6 +96,7 @@ print(f'✅ Test notification sent: {result}')
         echo "  restart            Restart the sync service"
         echo "  status             Check if service is running"
         echo "  logs               Show live logs"
+        echo "  sync-now           Trigger immediate sync (service must be running)"
         echo "  install            Install the launch agent"
         echo "  uninstall          Remove the launch agent"
         echo "  test-notification  Test the notification system"

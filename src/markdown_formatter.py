@@ -328,9 +328,12 @@ class MarkdownFormatter:
         # Add key points
         bullet_gist = summary.get('shorthand_bullet', '')
         if bullet_gist and bullet_gist.strip():
+            # Format key points as proper bullet points with sections
+            formatted_bullet_gist = self._format_key_points_as_bullets(bullet_gist)
             summary_lines.extend([
                 '### Key Points',
-                bullet_gist,
+                '',
+                formatted_bullet_gist,
                 ''
             ])
             has_content = True
@@ -352,8 +355,11 @@ class MarkdownFormatter:
                     '### Action Items',
                     ''
                 ])
-                for item in parsed_items:
+                for i, item in enumerate(parsed_items):
                     summary_lines.append(f'- [ ] {item}')
+                    # Add extra line break between action items (except after the last one)
+                    if i < len(parsed_items) - 1:
+                        summary_lines.append('')
                 summary_lines.append('')
                 has_content = True
         
@@ -521,6 +527,38 @@ class MarkdownFormatter:
                     items.append(f"{person} {action_line}")
         
         return items
+    
+    def _format_key_points_as_bullets(self, bullet_gist):
+        """
+        Format key points text into proper bullet points with section spacing.
+        
+        Converts structured text with emoji headers and paragraphs into 
+        bullet points with proper spacing between sections.
+        """
+        lines = bullet_gist.strip().split('\n')
+        formatted_lines = []
+        current_section_header = None
+        
+        for line in lines:
+            line = line.strip()
+            if not line:
+                continue
+                
+            # Check if this is a section header (starts with emoji, has ** title **, and ends with timestamp in parentheses)
+            import re
+            if re.match(r'^[^\w\s]+\s*\*\*[^*]+\*\*.*\(\d+:\d+\s*-\s*\d+:\d+\)$', line):
+                # Add spacing before new section (except for first section)
+                if current_section_header is not None:
+                    formatted_lines.append('')
+                
+                # Add the section header as-is
+                formatted_lines.append(line)
+                current_section_header = line
+            else:
+                # Convert paragraph text to bullet points
+                formatted_lines.append(f'  - {line}')
+        
+        return '\n'.join(formatted_lines)
     
     def _format_timestamp(self, start_time):
         """Format timestamp to MM:SS format."""

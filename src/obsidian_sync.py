@@ -29,10 +29,39 @@ class ObsidianSync:
         # Use the formatter's filename generation method
         return self.formatter.format_filename(meeting_data)
     
-    def check_duplicate(self, filename: str) -> bool:
-        """Check if a file with the given name already exists."""
-        file_path = self.fireflies_folder / filename
-        return file_path.exists()
+    def get_unique_filename(self, base_path: Path) -> Path:
+        """Generate a unique filename by appending version numbers if needed.
+        
+        Args:
+            base_path: The desired file path
+            
+        Returns:
+            A unique file path that doesn't conflict with existing files
+        """
+        # Task 1.2: Check if base_path exists
+        if not base_path.exists():
+            logger.debug(f"Base path does not exist, using: {base_path}")
+            return base_path
+        
+        logger.warning(f"File already exists: {base_path}, generating unique filename")
+        
+        # Task 1.3: Extract base name and extension
+        stem = base_path.stem
+        suffix = base_path.suffix
+        parent = base_path.parent
+        
+        # Task 1.4: Loop to find next available version number
+        version = 1
+        while True:
+            versioned_filename = f"{stem} ({version}){suffix}"
+            versioned_path = parent / versioned_filename
+            
+            if not versioned_path.exists():
+                # Task 1.5: Return the unique path
+                logger.info(f"Using versioned filename: {versioned_filename}")
+                return versioned_path
+            
+            version += 1
     
     def save_meeting(self, meeting_data: Dict[str, Any], content: str) -> Optional[Path]:
         """Save meeting content to Obsidian vault."""
@@ -44,11 +73,21 @@ class ObsidianSync:
             filename = self.generate_filename(meeting_data)
             file_path = self.fireflies_folder / filename
             
-            # Write content to file
-            file_path.write_text(content, encoding='utf-8')
-            logger.info(f"Meeting saved successfully: {filename}")
+            # Task 2.1: Call get_unique_filename before writing
+            unique_file_path = self.get_unique_filename(file_path)
             
-            return file_path
+            # Task 2.2: Write content to the unique file path
+            unique_file_path.write_text(content, encoding='utf-8')
+            
+            # Task 2.3: Update logging to show actual filename used
+            actual_filename = unique_file_path.name
+            if actual_filename != filename:
+                logger.info(f"Meeting saved successfully: {actual_filename} (original: {filename})")
+            else:
+                logger.info(f"Meeting saved successfully: {actual_filename}")
+            
+            # Task 2.4: Return the actual path where file was saved
+            return unique_file_path
             
         except Exception as e:
             logger.error(f"Failed to save meeting: {e}")

@@ -11,6 +11,7 @@ from src.state_manager import StateManager
 from src.config import get_config
 from src.utils.logger import setup_logger
 from src.notification_service import get_notification_service
+from src import signal_handler as sig_handler
 
 logger = setup_logger(__name__)
 
@@ -182,16 +183,26 @@ def run_polling_loop(config, test_meeting_ids: Optional[List[str]] = None):
     
     while not shutdown_requested:
         try:
-            # Process meetings
-            processed = process_meetings(fireflies_client, obsidian_sync, state_manager, config,
-                                       enable_notifications=config.notifications.enabled)
+            # Check if immediate sync was requested via signal
+            if sig_handler.is_sync_requested():
+                logger.info("[MANUAL] Processing signal-triggered sync")
+                sig_handler.clear_sync_request()
+                
+                # Process meetings immediately
+                processed = process_meetings(fireflies_client, obsidian_sync, state_manager, config,
+                                           enable_notifications=config.notifications.enabled)
+                logger.info(f"[MANUAL] Signal-triggered sync completed, processed {processed} meetings")
+            else:
+                # Regular polling sync
+                processed = process_meetings(fireflies_client, obsidian_sync, state_manager, config,
+                                           enable_notifications=config.notifications.enabled)
             
             # Update last check time
             state_manager.set_metadata('last_poll_time', datetime.now().isoformat())
             
-            # Wait for next poll (check for shutdown every second)
+            # Wait for next poll (check for shutdown and signals every second)
             for _ in range(poll_interval):
-                if shutdown_requested:
+                if shutdown_requested or sig_handler.is_sync_requested():
                     break
                 time.sleep(1)
                 
@@ -203,6 +214,8 @@ def run_polling_loop(config, test_meeting_ids: Optional[List[str]] = None):
             # Wait before retrying to avoid rapid failure loops
             time.sleep(poll_interval)
     
+    # Clean up signal handlers on shutdown
+    sig_handler.cleanup_signal_handlers()
     logger.info("Sync service stopped")
 
 
@@ -223,6 +236,9 @@ def main():
     try:
         # Load configuration
         config = get_config()
+        
+        # Set up signal handlers for immediate sync
+        sig_handler.setup_signal_handlers()
         
         # Run the service
         run_polling_loop(config, args.test)

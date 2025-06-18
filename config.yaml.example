@@ -24,3 +24,6 @@ sync:
   polling_interval_seconds: 15
   test_meeting_ids: []
   test_mode: false
+  # Note: Manual sync can be triggered anytime using:
+  # ./manage_service.sh sync-now
+  # This sends SIGUSR1 signal to trigger immediate sync
