@@ -504,7 +504,7 @@ class FirefliesClient:
         else:
             from_date_str = since_date
             
-        return asyncio.run(self.get_recent_transcripts(from_date_str, limit=limit))
+        return asyncio.run(self.get_all_transcripts_since(from_date_str))
     
     def get_meeting(self, meeting_id: str) -> Optional[Dict]:
         """
