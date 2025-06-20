@@ -85,6 +85,12 @@ def process_meetings(fireflies_client: FirefliesClient,
             # Filter out already processed meetings first, then fetch full details
             logger.info(f"Found {len(meetings_list)} meetings, filtering already processed and checking summary readiness...")
             meetings = []
+            already_processed_count = 0
+            
+            # Add progress tracking for large numbers of meetings
+            total_to_check = len(meetings_list)
+            checked_count = 0
+            
             for meeting_summary in meetings_list:
                 try:
                     meeting_id = meeting_summary.get('id')
@@ -92,18 +98,28 @@ def process_meetings(fireflies_client: FirefliesClient,
                         # Skip if already processed - avoid unnecessary API calls
                         if state_manager.is_processed(meeting_id):
                             logger.debug(f"Meeting {meeting_id} already processed, skipping API fetch")
+                            already_processed_count += 1
                             continue
+                        
+                        # Log progress for large batches
+                        checked_count += 1
+                        if checked_count % 10 == 0 or checked_count == 1:
+                            logger.info(f"Checking meeting {checked_count} of {total_to_check - already_processed_count} unprocessed meetings...")
                         
                         # Use summary check method to only get meetings with ready summaries
                         full_meeting = fireflies_client.get_meeting_with_summary_check(meeting_id)
                         if full_meeting:
                             meetings.append(full_meeting)
+                            logger.info(f"Added meeting {meeting_id} to processing queue (total: {len(meetings)})")
                         else:
                             # Meeting summary not ready - skip but don't count as error
                             skipped_count += 1
                 except Exception as e:
                     logger.error(f"Failed to fetch full details for meeting {meeting_id}: {e}")
                     error_count += 1
+            
+            if already_processed_count > 0:
+                logger.info(f"Skipped {already_processed_count} already processed meetings")
         
         logger.info(f"Found {len(meetings)} meetings with ready summaries to process")
         if skipped_count > 0:
